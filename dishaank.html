@@ -43,6 +43,27 @@
     footer a:hover {
       text-decoration: underline;
     }
+    .service-btn {
+    display: inline-block;
+    background-color: #003366;
+    color: #ffffff !important; /* Ensures text stays white */
+    font-weight: bold;
+    border: none;
+    padding: 15px 30px;        /* Increased size */
+    font-size: 1.1rem;         /* Slightly larger text */
+    text-decoration: none;     /* Removes underline */
+    transition: 0.3s;
+    border-radius: 5px;        /* Optional: adds slight curve */
+    white-space: nowrap;       /* Keeps text on one line */
+}
+
+.service-btn:hover {
+    background-color: #f39c12;
+    color: #ffffff !important;
+    text-decoration: none;     /* Keeps underline off on hover */
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
 
     /* Dropdown menu fix */
     .dropdown-menu {
@@ -185,6 +206,11 @@
                 </ul>
             </div>
         </div>
+   <div class="row g-3 mb-4 justify-content-center">
+    <div class="col-auto">
+        <a class="btn service-btn" href="https://play.google.com/store/apps/details?id=com.ksrsac.sslr&hl=en_IN" target="_blank" rel="noopener noreferrer">Dishaank</a>
+    </div>
+</div>
 
         <div class="mt-4">
             <h3>Top Features of the Dishaank App</h3>
@@ -307,4 +333,5 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
