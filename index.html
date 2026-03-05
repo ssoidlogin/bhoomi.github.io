@@ -134,6 +134,30 @@
     th { background-color: #f4f4f4; color: #003366; }
     tr:nth-child(even) { background-color: #f9f9f9; }
     tr:hover { background-color: #f1f1f1; }
+    /* Custom Interactive Tools CSS */
+    .tool-container { height: 100%; padding: 20px; background: #ffffff; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+    .tool-container h3 { margin-top: 0; color: #003366; font-size: 1.2rem; text-align: left;}
+    .form-group { margin-bottom: 15px; }
+    .form-group label { display: block; margin-bottom: 5px; font-weight: bold; font-size: 14px; }
+    .form-group input, .form-group select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+    .tool-btn { width: 100%; padding: 10px; background-color: #003366; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 16px; transition: 0.3s;}
+    .tool-btn:hover { background-color: #cc7a00; transform: translateY(-2px);}
+    
+    /* Converter Specific */
+    #converter-result { margin-top: 15px; padding: 10px; background-color: #e9ecef; border-radius: 4px; text-align: center; font-weight: bold; font-size: 16px; display: none; }
+    
+    /* Estimator Specific */
+    .result-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 14px;}
+    .result-row.total { font-weight: bold; border-top: 1px solid #ccc; padding-top: 8px; font-size: 16px; color: #d9534f;}
+    
+    /* Checklist Specific */
+    .checklist-item { display: flex; align-items: flex-start; margin-bottom: 10px; font-size: 14px; cursor: pointer; }
+    .checklist-item input { margin-right: 10px; margin-top: 4px; width: 16px; height: 16px; cursor: pointer;}
+    .checklist-item span { transition: color 0.2s; }
+    .checklist-item input:checked + span { text-decoration: line-through; color: #888; }
+    .progress-container { width: 100%; background-color: #e9ecef; border-radius: 4px; margin-bottom: 15px; overflow: hidden;}
+    .progress-bar-custom { height: 10px; background-color: #28a745; width: 0%; transition: width 0.4s ease; }
+    .progress-text { font-size: 12px; font-weight: bold; margin-bottom: 5px; text-align: right; color: #555;}
   </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1740097004640521"
      crossorigin="anonymous"></script>
@@ -209,6 +233,131 @@
         </button>
     </div>
  </div>
+  <h2 class="mb-4">Property Calculators & Verification Tools</h2>
+  <div class="row g-4 mb-5">
+    
+    <div class="col-lg-4 col-md-12">
+      <div class="tool-container">
+        <h3>Land Area Converter</h3>
+        <div class="form-group">
+          <label>Value to Convert</label>
+          <input type="number" id="area-input" placeholder="Enter number..." min="0" step="any">
+        </div>
+        <div class="form-group">
+          <label>From Unit</label>
+          <select id="unit-from">
+            <option value="gunta">Gunta</option>
+            <option value="acre">Acre</option>
+            <option value="hectare">Hectare</option>
+            <option value="sqft">Square Feet</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>To Unit</label>
+          <select id="unit-to">
+            <option value="acre">Acre</option>
+            <option value="gunta">Gunta</option>
+            <option value="hectare">Hectare</option>
+            <option value="sqft">Square Feet</option>
+          </select>
+        </div>
+        <button class="tool-btn" onclick="convertArea()">Convert</button>
+        <div id="converter-result"></div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-12">
+      <div class="tool-container">
+        <h3>Stamp Duty Estimator</h3>
+        <div class="form-group">
+          <label>Property Value (₹)</label>
+          <input type="number" id="property-value" placeholder="e.g. 5000000" min="0">
+        </div>
+        <button class="tool-btn" onclick="calculateDuty()" style="margin-top: 10px;">Estimate Costs</button>
+        
+        <div id="duty-result" style="display:none; margin-top: 20px;">
+          <div class="result-row"><span>Basic Duty (5.6%):</span> <span id="basic-sd">₹0</span></div>
+          <div class="result-row"><span>Surcharge (~10%):</span> <span id="surcharge">₹0</span></div>
+          <div class="result-row"><span>Reg. Fee (1%):</span> <span id="reg-fee">₹0</span></div>
+          <div class="result-row total"><span>Total Cost:</span> <span id="total-cost">₹0</span></div>
+          <p style="font-size: 11px; color: #777; margin-top: 10px; text-align:center;">*Estimation based on standard Karnataka rates.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-12">
+      <div class="tool-container">
+        <h3>Buyer's Document Checklist</h3>
+        <div class="progress-text" id="progress-text">0% Completed</div>
+        <div class="progress-container">
+          <div class="progress-bar-custom" id="progress-bar"></div>
+        </div>
+        <div id="checklist">
+          <label class="checklist-item"><input type="checkbox" onchange="updateProgress()"><span>Latest RTC (Pahani)</span></label>
+          <label class="checklist-item"><input type="checkbox" onchange="updateProgress()"><span>Mutation Register Extract</span></label>
+          <label class="checklist-item"><input type="checkbox" onchange="updateProgress()"><span>Encumbrance Certificate (15 Yrs)</span></label>
+          <label class="checklist-item"><input type="checkbox" onchange="updateProgress()"><span>Original Title Deed</span></label>
+          <label class="checklist-item"><input type="checkbox" onchange="updateProgress()"><span>Tax Paid Receipts</span></label>
+          <label class="checklist-item"><input type="checkbox" onchange="updateProgress()"><span>Family Tree (If inherited)</span></label>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // Tool 1 Logic
+    function convertArea() {
+      const inputValue = parseFloat(document.getElementById('area-input').value);
+      const fromUnit = document.getElementById('unit-from').value;
+      const toUnit = document.getElementById('unit-to').value;
+      const resultDiv = document.getElementById('converter-result');
+
+      if (isNaN(inputValue)) {
+        resultDiv.style.display = 'block';
+        resultDiv.innerText = "Please enter a number.";
+        return;
+      }
+      const toSqFt = { gunta: 1089, acre: 43560, hectare: 107639.104, sqft: 1 };
+      const valueInSqFt = inputValue * toSqFt[fromUnit];
+      const finalValue = valueInSqFt / toSqFt[toUnit];
+      
+      resultDiv.style.display = 'block';
+      resultDiv.innerText = `${inputValue} ${fromUnit.toUpperCase()} = ${finalValue.toFixed(4)} ${toUnit.toUpperCase()}`;
+    }
+
+    // Tool 2 Logic
+    function calculateDuty() {
+      const propValue = parseFloat(document.getElementById('property-value').value);
+      const resultDiv = document.getElementById('duty-result');
+
+      if (isNaN(propValue) || propValue <= 0) {
+        alert("Please enter a valid property value.");
+        return;
+      }
+      const basicSD = propValue * 0.056; 
+      const surcharge = basicSD * 0.10;  
+      const regFee = propValue * 0.01;     
+      const totalCost = basicSD + surcharge + regFee;
+      const formatter = new Intl.NumberFormat('en-IN');
+
+      document.getElementById('basic-sd').innerText = '₹' + formatter.format(Math.round(basicSD));
+      document.getElementById('surcharge').innerText = '₹' + formatter.format(Math.round(surcharge));
+      document.getElementById('reg-fee').innerText = '₹' + formatter.format(Math.round(regFee));
+      document.getElementById('total-cost').innerText = '₹' + formatter.format(Math.round(totalCost));
+      resultDiv.style.display = 'block';
+    }
+
+    // Tool 3 Logic
+    function updateProgress() {
+      const checkboxes = document.querySelectorAll('#checklist input[type="checkbox"]');
+      let checked = 0;
+      checkboxes.forEach(box => { if (box.checked) checked++; });
+      const percentage = Math.round((checked / checkboxes.length) * 100);
+      document.getElementById('progress-bar').style.width = percentage + '%';
+      document.getElementById('progress-text').innerText = percentage + '% Completed';
+    }
+  </script>
 
   <h3>Key Details You Should Know</h3>
   <table>
@@ -776,6 +925,7 @@
 </body>
 
 </html>
+
 
 
 
