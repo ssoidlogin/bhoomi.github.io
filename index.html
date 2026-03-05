@@ -282,7 +282,7 @@
 
     <div class="col-lg-4 col-md-12">
       <div class="tool-container">
-        <h3>Stamp Duty Estimator</h3>
+        <h3>Stamp Duty Calculator</h3>
         <div class="form-group">
           <label>Property Value (₹)</label>
           <input type="number" id="property-value" placeholder="e.g. 5000000" min="0">
@@ -290,11 +290,11 @@
         <button class="tool-btn" onclick="calculateDuty()" style="margin-top: 10px;">Estimate Costs</button>
         
         <div id="duty-result" style="display:none; margin-top: 20px;">
-          <div class="result-row"><span>Basic Duty (5.6%):</span> <span id="basic-sd">₹0</span></div>
+          <div class="result-row"><span>Basic Duty:</span> <span id="basic-sd">₹0</span></div>
           <div class="result-row"><span>Surcharge (~10%):</span> <span id="surcharge">₹0</span></div>
-          <div class="result-row"><span>Reg. Fee (1%):</span> <span id="reg-fee">₹0</span></div>
+          <div class="result-row"><span>Reg. Fee:</span> <span id="reg-fee">₹0</span></div>
           <div class="result-row total"><span>Total Cost:</span> <span id="total-cost">₹0</span></div>
-          <p style="font-size: 11px; color: #777; margin-top: 10px; text-align:center;">*Estimation based on standard Karnataka rates.</p>
+          <p style="font-size: 11px; color: #777; margin-top: 10px; text-align:center;">*Estimation utilizes current Karnataka slabs.</p>
         </div>
       </div>
     </div>
@@ -349,15 +349,28 @@
         alert("Please enter a valid property value.");
         return;
       }
-      const basicSD = propValue * 0.056; 
-      const surcharge = basicSD * 0.10;  
-      const regFee = propValue * 0.01;     
+      
+      let stampDutyRate = 0;
+      
+      // Determine Karnataka Stamp Duty Slab
+      if (propValue <= 2000000) {
+          stampDutyRate = 0.02; // 2% for properties up to 20 Lakhs
+      } else if (propValue > 2000000 && propValue <= 4500000) {
+          stampDutyRate = 0.03; // 3% for properties between 21 to 45 Lakhs
+      } else {
+          stampDutyRate = 0.05; // 5% for properties above 45 Lakhs
+      }
+
+      const basicSD = propValue * stampDutyRate; 
+      const surcharge = basicSD * 0.10; // Standard 10% Cess/Surcharge on the Stamp Duty
+      const regFee = propValue * 0.02;  // 2% Registration Fee
       const totalCost = basicSD + surcharge + regFee;
+      
       const formatter = new Intl.NumberFormat('en-IN');
 
-      document.getElementById('basic-sd').innerText = '₹' + formatter.format(Math.round(basicSD));
+      document.getElementById('basic-sd').innerText = '₹' + formatter.format(Math.round(basicSD)) + ' (' + (stampDutyRate * 100) + '%)';
       document.getElementById('surcharge').innerText = '₹' + formatter.format(Math.round(surcharge));
-      document.getElementById('reg-fee').innerText = '₹' + formatter.format(Math.round(regFee));
+      document.getElementById('reg-fee').innerText = '₹' + formatter.format(Math.round(regFee)) + ' (2%)';
       document.getElementById('total-cost').innerText = '₹' + formatter.format(Math.round(totalCost));
       resultDiv.style.display = 'block';
     }
@@ -1004,6 +1017,7 @@
 </body>
 
 </html>
+
 
 
 
