@@ -238,14 +238,11 @@
     <div class="col-md-4 col-6"><a class="btn service-btn" href="https://bhoomojini.karnataka.gov.in/index.html">Mojini v3</a></div>
     <div class="col-md-4 col-6"><a class="btn service-btn" href="https://bhoomirtc.net.in/dishaank.html">Dishaank App</a></div>
     
-    <div class="row g-3 mb-4 justify-content-center">
-    
     <div class="col-md-4 col-6">
         <a href="#otherServicesModal" class="btn service-btn" data-bs-toggle="modal" role="button">
             Other Services
         </a>
     </div>
-</div>
 </div>
   <h2 class="mb-4">Property Calculators & Verification Tools</h2>
   <div class="row g-4 mb-5">
@@ -290,9 +287,9 @@
         <button class="tool-btn" onclick="calculateDuty()" style="margin-top: 10px;">Estimate Costs</button>
         
         <div id="duty-result" style="display:none; margin-top: 20px;">
-          <div class="result-row"><span>Basic Duty:</span> <span id="basic-sd">₹0</span></div>
-          <div class="result-row"><span>Surcharge (~10%):</span> <span id="surcharge">₹0</span></div>
-          <div class="result-row"><span>Reg. Fee:</span> <span id="reg-fee">₹0</span></div>
+          <div class="result-row"><span id="label-basic-sd">Basic Duty:</span> <span id="basic-sd">₹0</span></div>
+          <div class="result-row"><span>Surcharge (10%):</span> <span id="surcharge">₹0</span></div>
+          <div class="result-row"><span>Reg. Fee (2%):</span> <span id="reg-fee">₹0</span></div>
           <div class="result-row total"><span>Total Cost:</span> <span id="total-cost">₹0</span></div>
           <p style="font-size: 11px; color: #777; margin-top: 10px; text-align:center;">*Estimation utilizes current Karnataka slabs.</p>
         </div>
@@ -368,13 +365,17 @@
       
       const formatter = new Intl.NumberFormat('en-IN');
 
-      document.getElementById('basic-sd').innerText = '₹' + formatter.format(Math.round(basicSD)) + ' (' + (stampDutyRate * 100) + '%)';
+      // Update the left-side label with the dynamic percentage
+      document.getElementById('label-basic-sd').innerText = 'Basic Duty (' + (stampDutyRate * 100) + '%):';
+      
+      // Update the right-side values
+      document.getElementById('basic-sd').innerText = '₹' + formatter.format(Math.round(basicSD));
       document.getElementById('surcharge').innerText = '₹' + formatter.format(Math.round(surcharge));
-      document.getElementById('reg-fee').innerText = '₹' + formatter.format(Math.round(regFee)) + ' (2%)';
+      document.getElementById('reg-fee').innerText = '₹' + formatter.format(Math.round(regFee));
       document.getElementById('total-cost').innerText = '₹' + formatter.format(Math.round(totalCost));
+      
       resultDiv.style.display = 'block';
     }
-
     // Tool 3 Logic
     function updateProgress() {
       const checkboxes = document.querySelectorAll('#checklist input[type="checkbox"]');
@@ -1017,6 +1018,7 @@
 </body>
 
 </html>
+
 
 
 
