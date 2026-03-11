@@ -151,11 +151,64 @@
     .tool-btn:hover { background-color: #cc7a00; transform: translateY(-2px);}
     
     /* Converter Specific */
-    #converter-result { margin-top: 15px; padding: 10px; background-color: #e9ecef; border-radius: 4px; text-align: center; font-weight: bold; font-size: 16px; display: none; }
+    #converter-result { margin-top: 15px; padding: 12px 14px; background: linear-gradient(135deg, #e8f0fe, #f0f4ff); border: 1px solid #c5d5f5; border-radius: 8px; text-align: center; font-size: 15px; display: none; }
+    .conv-from { color: #555; font-weight: 600; }
+    .conv-eq { margin: 0 8px; color: #888; font-size: 18px; }
+    .conv-to { color: #003366; font-weight: 800; font-size: 17px; }
+    .converter-row { display: flex; align-items: flex-end; gap: 8px; margin-bottom: 4px; }
+    .converter-select-wrap { flex: 1; }
+    .converter-select-wrap label { display: block; margin-bottom: 5px; font-weight: bold; font-size: 14px; }
+    .converter-select-wrap select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+    .swap-btn { flex-shrink: 0; width: 36px; height: 38px; background: #003366; color: #fff; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; transition: 0.2s; margin-bottom: 1px; }
+    .swap-btn:hover { background: #cc7a00; }
+    .all-units-box { margin-top: 14px; padding: 12px; background: #f8f9fb; border: 1px solid #e4e8f0; border-radius: 8px; }
+    .all-units-title { font-size: 12px; font-weight: bold; color: #888; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
+    #all-units-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+    .unit-chip { background: #fff; border: 1px solid #e0e4ed; border-radius: 6px; padding: 7px 10px; display: flex; flex-direction: column; }
+    .unit-chip-active { border-color: #003366; background: #e8f0fe; }
+    .unit-val { font-size: 13px; font-weight: bold; color: #003366; }
+    .unit-name { font-size: 11px; color: #888; margin-top: 2px; }
     
-    /* Estimator Specific */
-    .result-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 14px;}
-    .result-row.total { font-weight: bold; border-top: 1px solid #ccc; padding-top: 8px; font-size: 16px; color: #d9534f;}
+    /* Stamp Duty Calculator Specific */
+    .input-wrap { position: relative; display: flex; align-items: center; }
+    .input-prefix { position: absolute; left: 10px; font-weight: bold; color: #555; font-size: 15px; pointer-events: none; }
+    .input-wrap input { padding-left: 26px !important; }
+    .hint { display: block; font-size: 11px; color: #888; margin-top: 4px; }
+    .field { margin-bottom: 12px; }
+    .field label { display: block; margin-bottom: 5px; font-weight: bold; font-size: 14px; }
+    .field select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+    .calc-btn { width: 100%; padding: 11px; background-color: #003366; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 15px; transition: 0.3s; margin-top: 6px; }
+    .calc-btn:hover { background-color: #cc7a00; transform: translateY(-2px); }
+
+    /* Results Card */
+    .results-card { display: none; margin-top: 16px; padding: 18px; background: #fff; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.07); }
+    .results-title { font-size: 15px; font-weight: bold; color: #003366; margin-bottom: 12px; }
+    .property-summary { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+    .summary-pill { background: #e8f0fe; color: #003366; border-radius: 20px; padding: 4px 12px; font-size: 12px; font-weight: bold; }
+    .result-rows { margin-bottom: 10px; }
+    .result-row { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; border-bottom: 1px solid #f0f0f0; font-size: 13px; animation: fadeIn 0.3s ease both; }
+    @keyframes fadeIn { from { opacity:0; transform: translateY(4px); } to { opacity:1; transform: none; } }
+    .result-label { display: flex; align-items: center; gap: 6px; color: #444; }
+    .dot { display: inline-block; width: 7px; height: 7px; background: #003366; border-radius: 50%; flex-shrink: 0; }
+    .result-value { font-weight: bold; color: #222; text-align: right; }
+    .result-pct { font-size: 11px; font-weight: normal; color: #888; margin-left: 5px; }
+    .total-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0 6px; border-top: 2px solid #003366; margin-top: 6px; }
+    .total-label { font-weight: bold; font-size: 15px; color: #003366; }
+    .total-value { font-weight: bold; font-size: 18px; color: #d9534f; }
+    .note-box { margin-top: 12px; padding: 10px 12px; background: #fffbe6; border-left: 3px solid #f39c12; border-radius: 4px; font-size: 12px; color: #555; line-height: 1.6; }
+    .reset-btn { margin-top: 12px; width: 100%; padding: 8px; background: transparent; border: 1px solid #003366; color: #003366; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: bold; transition: 0.2s; }
+    .reset-btn:hover { background: #003366; color: #fff; }
+
+    /* Rate Reference Card */
+    .card { background: #fff; border: 1px solid #ddd; border-radius: 10px; padding: 18px; margin-top: 16px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+    .card-title { display: flex; align-items: center; gap: 10px; font-weight: bold; font-size: 15px; color: #003366; margin-bottom: 14px; }
+    .card .icon { width: 28px; height: 28px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 13px; color: #fff; flex-shrink: 0; background: #003366; }
+    --slate: #6c757d;
+    .rate-table { width: 100%; border-collapse: collapse; font-size: 12px; margin: 0; }
+    .rate-table th, .rate-table td { border: 1px solid #e0e0e0; padding: 7px 8px; text-align: center; }
+    .rate-table th { background: #f4f4f4; color: #003366; font-weight: bold; }
+    .rate-table tr.highlight { background: #fff3cd; font-weight: bold; }
+    .rate-table .badge { background: #003366; color: #fff; font-size: 10px; border-radius: 4px; padding: 1px 5px; vertical-align: middle; }
     
     /* Checklist Specific */
     .checklist-item { display: flex; align-items: flex-start; margin-bottom: 10px; font-size: 14px; cursor: pointer; }
@@ -246,51 +299,167 @@
     <div class="col-lg-4 col-md-12">
       <div class="tool-container">
         <h3>Land Area Converter</h3>
+
         <div class="form-group">
-          <label>Value to Convert</label>
-          <input type="number" id="area-input" placeholder="Enter number..." min="0" step="any">
+          <label>Enter Value</label>
+          <input type="number" id="area-input" placeholder="e.g. 2.5" min="0" step="any" oninput="convertArea()">
         </div>
-        <div class="form-group">
-          <label>From Unit</label>
-          <select id="unit-from">
-            <option value="gunta">Gunta</option>
-            <option value="acre">Acre</option>
-            <option value="hectare">Hectare</option>
-            <option value="sqft">Square Feet</option>
-          </select>
+
+        <div class="converter-row">
+          <div class="converter-select-wrap">
+            <label>From</label>
+            <select id="unit-from" onchange="convertArea()">
+              <option value="sqft">Square Feet</option>
+              <option value="sqm">Square Metres</option>
+              <option value="gunta" selected>Gunta / Guntha</option>
+              <option value="cent">Cent</option>
+              <option value="acre">Acre</option>
+              <option value="bigha">Bigha (Karnataka)</option>
+              <option value="hectare">Hectare</option>
+            </select>
+          </div>
+          <button class="swap-btn" onclick="swapUnits()" title="Swap units">⇄</button>
+          <div class="converter-select-wrap">
+            <label>To</label>
+            <select id="unit-to" onchange="convertArea()">
+              <option value="sqft">Square Feet</option>
+              <option value="sqm">Square Metres</option>
+              <option value="gunta">Gunta / Guntha</option>
+              <option value="cent">Cent</option>
+              <option value="acre" selected>Acre</option>
+              <option value="bigha">Bigha (Karnataka)</option>
+              <option value="hectare">Hectare</option>
+            </select>
+          </div>
         </div>
-        <div class="form-group">
-          <label>To Unit</label>
-          <select id="unit-to">
-            <option value="acre">Acre</option>
-            <option value="gunta">Gunta</option>
-            <option value="hectare">Hectare</option>
-            <option value="sqft">Square Feet</option>
-          </select>
-        </div>
-        <button class="tool-btn" onclick="convertArea()">Convert</button>
+
         <div id="converter-result"></div>
+
+        <div class="all-units-box" id="all-units-box" style="display:none;">
+          <div class="all-units-title">All Equivalents</div>
+          <div id="all-units-grid"></div>
+        </div>
       </div>
     </div>
 
+
     <div class="col-lg-4 col-md-12">
-      <div class="tool-container">
-        <h3>Stamp Duty Calculator</h3>
-        <div class="form-group">
-          <label>Property Value (₹)</label>
-          <input type="number" id="property-value" placeholder="e.g. 5000000" min="0">
+    <div class="tool-container">
+      <h3>Stamp Duty Calculator</h3>
+      <div class="form-group">
+        <label>Property / Market Value (₹)</label>
+        <div class="input-wrap">
+          <span class="input-prefix">₹</span>
+          <input type="number" id="propValue" placeholder="e.g. 5000000" min="0" step="1000">
         </div>
-        <button class="tool-btn" onclick="calculateDuty()" style="margin-top: 10px;">Estimate Costs</button>
-        
-        <div id="duty-result" style="display:none; margin-top: 20px;">
-          <div class="result-row"><span id="label-basic-sd">Basic Duty:</span> <span id="basic-sd">₹0</span></div>
-          <div class="result-row"><span>Surcharge (10%):</span> <span id="surcharge">₹0</span></div>
-          <div class="result-row"><span>Reg. Fee (2%):</span> <span id="reg-fee">₹0</span></div>
-          <div class="result-row total"><span>Total Cost:</span> <span id="total-cost">₹0</span></div>
-          <p style="font-size: 11px; color: #777; margin-top: 10px; text-align:center;">*Estimation utilizes current Karnataka slabs.</p>
+        <span class="hint">Enter the higher of sale price or government guidance value</span>
+      </div>
+
+      <div class="field">
+        <label>Document Type</label>
+        <select id="docType">
+          <option value="sale">Sale Deed</option>
+          <option value="gift_family">Gift Deed (Family)</option>
+          <option value="gift_other">Gift Deed (Non-Family)</option>
+          <option value="partition">Partition Deed</option>
+          <option value="mortgage">Mortgage Deed</option>
+          <option value="lease">Lease (above 1yr)</option>
+          <option value="exchange">Exchange Deed</option>
+          <option value="settlement">Settlement Deed (Family)</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Property Location</label>
+        <select id="location">
+          <option value="bbmp">BBMP (Bengaluru City)</option>
+          <option value="bda">BDA / City Municipal</option>
+          <option value="town">Town Panchayat / CMC</option>
+          <option value="gram">Gram Panchayat (Rural)</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Ownership Type</label>
+        <select id="ownership">
+          <option value="individual">Individual</option>
+          <option value="joint">Joint (any combination)</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Property Type</label>
+        <select id="propType">
+          <option value="residential">Residential</option>
+          <option value="commercial">Commercial</option>
+          <option value="agricultural">Agricultural</option>
+          <option value="industrial">Industrial</option>
+        </select>
+      </div>
+
+      <button class="calc-btn" onclick="calculate()">Calculate Stamp Duty &amp; Registration Fees →</button>
+
+      <!-- Results -->
+      <div class="results-card" id="results">
+        <div class="results-title"> Fee Breakdown</div>
+        <div class="property-summary" id="propertySummary"></div>
+        <div class="result-rows" id="resultRows"></div>
+        <div class="total-row">
+          <div class="total-label">Total Payable</div>
+          <div class="total-value" id="totalValue">—</div>
         </div>
+        <div class="note-box" id="noteBox"></div>
+        <button class="reset-btn" onclick="reset()">↺ Recalculate</button>
+      </div>
+
+      <!-- Rate Reference Card -->
+      <div class="card">
+        <div class="card-title">
+          Official Rate Reference
+        </div>
+        <p style="font-size:13px; color:rgba(61,50,40,0.6); margin-bottom:18px;">Stamp duty slabs for <strong>Sale Deed</strong> as per Karnataka Stamps Act (effective Aug 2025):</p>
+        <table class="rate-table">
+          <thead>
+            <tr>
+              <th>Property Value</th>
+              <th>Stamp Duty</th>
+              <th>Reg. Fee <span class="badge">2025</span></th>
+              <th>Cess + Surcharge</th>
+              <th>Effective Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Below ₹20 Lakh</td>
+              <td>2%</td>
+              <td>2%</td>
+              <td>0.6%</td>
+              <td>4.6%</td>
+            </tr>
+            <tr>
+              <td>₹20 Lakh – ₹45 Lakh</td>
+              <td>3%</td>
+              <td>2%</td>
+              <td>0.6%</td>
+              <td>5.6%</td>
+            </tr>
+            <tr class="highlight">
+              <td>Above ₹45 Lakh</td>
+              <td>5%</td>
+              <td>2%</td>
+              <td>0.6%</td>
+              <td><strong>7.6%</strong></td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="font-size:11px; color:rgba(61,50,40,0.45); margin-top:14px;">
+          * Registration fee revised from 1% → 2% effective <strong>31 August 2025</strong>. Cess: 0.5%, Surcharge: 0.1%.
+          Gift deeds within family attract fixed duty (₹1,000–₹5,000). Rates may vary by property type and location.
+        </p>
       </div>
     </div>
+    </div>
+
 
     <div class="col-lg-4 col-md-12">
       <div class="tool-container">
@@ -314,64 +483,198 @@
 
   <script>
     // Tool 1 Logic
+    const toSqFt = {
+      sqft: 1,
+      sqm: 10.7639,
+      gunta: 1089,
+      cent: 435.6,
+      acre: 43560,
+      bigha: 14400,
+      hectare: 107639.104
+    };
+    const unitLabels = {
+      sqft: 'Sq. Feet', sqm: 'Sq. Metres', gunta: 'Gunta', cent: 'Cent',
+      acre: 'Acre', bigha: 'Bigha', hectare: 'Hectare'
+    };
+
+    function fmtArea(n) {
+      if (n >= 1000000) return (n / 1000000).toFixed(4) + 'M';
+      if (n < 0.0001) return n.toExponential(3);
+      if (n < 0.01) return n.toFixed(6);
+      if (n < 1) return n.toFixed(4);
+      if (n < 100) return n.toFixed(4);
+      return parseFloat(n.toFixed(4)).toLocaleString('en-IN');
+    }
+
     function convertArea() {
       const inputValue = parseFloat(document.getElementById('area-input').value);
       const fromUnit = document.getElementById('unit-from').value;
       const toUnit = document.getElementById('unit-to').value;
       const resultDiv = document.getElementById('converter-result');
+      const allBox = document.getElementById('all-units-box');
+      const allGrid = document.getElementById('all-units-grid');
 
-      if (isNaN(inputValue)) {
-        resultDiv.style.display = 'block';
-        resultDiv.innerText = "Please enter a number.";
+      if (!document.getElementById('area-input').value || isNaN(inputValue) || inputValue < 0) {
+        resultDiv.style.display = 'none';
+        allBox.style.display = 'none';
         return;
       }
-      const toSqFt = { gunta: 1089, acre: 43560, hectare: 107639.104, sqft: 1 };
+
       const valueInSqFt = inputValue * toSqFt[fromUnit];
       const finalValue = valueInSqFt / toSqFt[toUnit];
-      
+
       resultDiv.style.display = 'block';
-      resultDiv.innerText = `${inputValue} ${fromUnit.toUpperCase()} = ${finalValue.toFixed(4)} ${toUnit.toUpperCase()}`;
+      resultDiv.innerHTML = `
+        <span class="conv-from">${parseFloat(inputValue.toFixed(4)).toLocaleString('en-IN')} ${unitLabels[fromUnit]}</span>
+        <span class="conv-eq">=</span>
+        <span class="conv-to">${fmtArea(finalValue)} ${unitLabels[toUnit]}</span>
+      `;
+
+      // All units
+      allBox.style.display = 'block';
+      let gridHTML = '';
+      Object.keys(toSqFt).forEach(unit => {
+        const val = valueInSqFt / toSqFt[unit];
+        const isActive = unit === toUnit;
+        gridHTML += `<div class="unit-chip ${isActive ? 'unit-chip-active' : ''}">
+          <span class="unit-val">${fmtArea(val)}</span>
+          <span class="unit-name">${unitLabels[unit]}</span>
+        </div>`;
+      });
+      allGrid.innerHTML = gridHTML;
+    }
+
+    function swapUnits() {
+      const from = document.getElementById('unit-from');
+      const to = document.getElementById('unit-to');
+      [from.value, to.value] = [to.value, from.value];
+      convertArea();
     }
 
     // Tool 2 Logic
-    function calculateDuty() {
-      const propValue = parseFloat(document.getElementById('property-value').value);
-      const resultDiv = document.getElementById('duty-result');
+    function fmt(n) {
+    return '₹' + Math.round(n).toLocaleString('en-IN');
+  }
 
-      if (isNaN(propValue) || propValue <= 0) {
-        alert("Please enter a valid property value.");
-        return;
-      }
-      
-      let stampDutyRate = 0;
-      
-      // Determine Karnataka Stamp Duty Slab
-      if (propValue <= 2000000) {
-          stampDutyRate = 0.02; // 2% for properties up to 20 Lakhs
-      } else if (propValue > 2000000 && propValue <= 4500000) {
-          stampDutyRate = 0.03; // 3% for properties between 21 to 45 Lakhs
-      } else {
-          stampDutyRate = 0.05; // 5% for properties above 45 Lakhs
-      }
-
-      const basicSD = propValue * stampDutyRate; 
-      const surcharge = basicSD * 0.10; // Standard 10% Cess/Surcharge on the Stamp Duty
-      const regFee = propValue * 0.02;  // 2% Registration Fee
-      const totalCost = basicSD + surcharge + regFee;
-      
-      const formatter = new Intl.NumberFormat('en-IN');
-
-      // Update the left-side label with the dynamic percentage
-      document.getElementById('label-basic-sd').innerText = 'Basic Duty (' + (stampDutyRate * 100) + '%):';
-      
-      // Update the right-side values
-      document.getElementById('basic-sd').innerText = '₹' + formatter.format(Math.round(basicSD));
-      document.getElementById('surcharge').innerText = '₹' + formatter.format(Math.round(surcharge));
-      document.getElementById('reg-fee').innerText = '₹' + formatter.format(Math.round(regFee));
-      document.getElementById('total-cost').innerText = '₹' + formatter.format(Math.round(totalCost));
-      
-      resultDiv.style.display = 'block';
+  function getStampDutyRate(value, docType) {
+    if (docType === 'gift_family') return { rate: 0, fixed: true, fixedAmt: 5000, label: 'Fixed (Family Gift)' };
+    if (docType === 'settlement') return { rate: 0, fixed: true, fixedAmt: 1000, label: 'Fixed (Family Settlement)' };
+    if (docType === 'partition') return { rate: 0.01, fixed: false, label: '1%' }; // simplified
+    if (docType === 'mortgage') return { rate: 0.005, fixed: false, label: '0.5%' };
+    if (docType === 'lease') return { rate: 0.005, fixed: false, label: '0.5% of avg annual rent' };
+    if (docType === 'exchange') return { rate: 0.05, fixed: false, label: '5%' };
+    if (docType === 'gift_other') {
+      // Same as sale deed
     }
+    // Sale deed / Gift to non-family — slab based
+    if (value < 2000000) return { rate: 0.02, fixed: false, label: '2%' };
+    if (value <= 4500000) return { rate: 0.03, fixed: false, label: '3%' };
+    return { rate: 0.05, fixed: false, label: '5%' };
+  }
+
+  function getRegFee(value, docType) {
+    if (['gift_family', 'settlement', 'partition'].includes(docType)) return 0.01; // 1% for these
+    return 0.02; // 2% from Aug 2025
+  }
+
+  function calculate() {
+    const valueInput = document.getElementById('propValue').value;
+    if (!valueInput || parseFloat(valueInput) <= 0) {
+      alert('Please enter a valid property value.');
+      return;
+    }
+    const value = parseFloat(valueInput);
+    const docType = document.getElementById('docType').value;
+    const location = document.getElementById('location').value;
+    const ownership = document.getElementById('ownership').value;
+    const propType = document.getElementById('propType').value;
+
+    const sdInfo = getStampDutyRate(value, docType);
+    let stampDuty = sdInfo.fixed ? sdInfo.fixedAmt : value * sdInfo.rate;
+
+    const regRate = getRegFee(value, docType);
+    const regFee = value * regRate;
+
+    // Cess (0.5% on stamp duty)
+    const cess = stampDuty * 1.0; // 0.5% of property value approx
+    const cessOnProp = value * 0.005;
+    const surcharge = value * 0.001;
+
+    // Additional charges for certain locations
+    let locationNote = '';
+    let additionalAmt = 0;
+
+    if (location === 'bbmp') locationNote = 'BBMP area — standard urban rates apply.';
+    else if (location === 'bda') locationNote = 'BDA / City Municipal area — standard rates apply.';
+    else if (location === 'town') { locationNote = 'Town Panchayat area.'; additionalAmt = 0; }
+    else { locationNote = 'Gram Panchayat (rural) — some concessions may apply; verify locally.'; }
+
+    // Agricultural concession
+    let propTypeNote = '';
+    if (propType === 'agricultural') propTypeNote = ' Agricultural land: lower circle rates may apply.';
+
+    const total = stampDuty + regFee + cessOnProp + surcharge + additionalAmt;
+
+    // Build results
+    const resultsEl = document.getElementById('results');
+    resultsEl.style.display = 'block';
+    resultsEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    // Summary pills
+    const docLabels = {
+      sale: 'Sale Deed', gift_family: 'Gift Deed (Family)', gift_other: 'Gift Deed',
+      partition: 'Partition Deed', mortgage: 'Mortgage Deed', lease: 'Lease Deed',
+      exchange: 'Exchange Deed', settlement: 'Settlement Deed'
+    };
+    const locLabels = {
+      bbmp: 'BBMP – Bengaluru', bda: 'BDA / City Municipal', town: 'Town Panchayat', gram: 'Gram Panchayat'
+    };
+
+    document.getElementById('propertySummary').innerHTML = `
+      <div class="summary-pill">${fmt(value)}</div>
+      <div class="summary-pill">${docLabels[docType]}</div>
+      <div class="summary-pill">${locLabels[location]}</div>
+    `;
+
+    const rows = [
+      { label: 'Property Value', value: fmt(value), pct: '' },
+      { label: `Stamp Duty (${sdInfo.label})`, value: fmt(stampDuty), pct: sdInfo.fixed ? 'Fixed' : `${(sdInfo.rate * 100).toFixed(0)}% of value` },
+      { label: `Registration Fee (${(regRate * 100).toFixed(0)}%)`, value: fmt(regFee), pct: `${(regRate * 100).toFixed(0)}% of value` },
+      { label: 'CESS (0.5%)', value: fmt(cessOnProp), pct: '0.5% of value' },
+      { label: 'Surcharge (0.1%)', value: fmt(surcharge), pct: '0.1% of value' },
+    ];
+
+    let rowsHTML = '';
+    rows.forEach((r, i) => {
+      rowsHTML += `
+        <div class="result-row" style="animation-delay:${0.05 + i * 0.05}s">
+          <div class="result-label"><span class="dot"></span>${r.label}</div>
+          <div class="result-value">${r.value} <span class="result-pct">${r.pct}</span></div>
+        </div>`;
+    });
+    document.getElementById('resultRows').innerHTML = rowsHTML;
+    document.getElementById('totalValue').textContent = fmt(total);
+
+    const effectivePct = ((total / value) * 100).toFixed(2);
+    document.getElementById('noteBox').innerHTML = `
+      <strong>Note:</strong> Total effective rate: ${effectivePct}% of property value.
+      ${locationNote}${propTypeNote}
+      Stamp duty is calculated on the higher of the declared price or the government guidance (circle) value.
+      Registration fee revised to 2% from <strong>31 Aug 2025</strong>.
+      Verify current circle rates on <strong>Kaveri 2.0 portal</strong> before finalising your transaction.
+    `;
+  }
+
+  function reset() {
+    document.getElementById('results').style.display = 'none';
+    document.getElementById('propValue').value = '';
+    document.getElementById('propValue').focus();
+  }
+
+  // Allow Enter key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') calculate();
+  });
     // Tool 3 Logic
     function updateProgress() {
       const checkboxes = document.querySelectorAll('#checklist input[type="checkbox"]');
@@ -1040,6 +1343,7 @@
 </body>
 
 </html>
+
 
 
 
