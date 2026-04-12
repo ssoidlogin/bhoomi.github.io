@@ -2,208 +2,233 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Bhoomi | Bhoomi Karnataka, View RTC Pahani, Mutation Status & Land Records Online @landrecords.karnataka.gov.in</title>
+  <title>Bhoomi RTC Online Karnataka, View RTC Pahani, Mutation Status & Land Records Online @landrecords.karnataka.gov.in</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <meta name="description" content="Bhoomi RTC, commonly known in Karnataka as Pahani (ಪಹಣಿ), is the official digital land record document managed by the State Government. It serves as the primary legal proof of land ownership">
   <meta name="keywords" content="Bhoomi, bhoomi online, bhoomi rtc, rtc, rtc Karnataka, RTC online, Pahani, pahani online, view rtc, land records Karnataka, Mutation status, Revenue Maps, i-RTC, Dishaank App, XML Verification">
   <link rel="canonical" href="https://bhoomirtc.net.in/" />
   <meta name="google-site-verification" content="0sArpUmYVcreRsdqeNiMwHtw7w-E-1seWuMsp4aWjQ4" />
- 
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon.webp">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
   <style>
-    html{scroll-behavior:smooth;overflow-x:hidden}
-    body{background-color:#f5f7fa;color:#222;font-size:16px;line-height:1.7}
-    .bg-custom{background-color:#003366}
-    header a,footer,footer a{color:#fff!important;font-weight:bold;text-decoration:none}
-    footer a:hover{text-decoration:underline}
-    .navbar-brand{padding-left:10px;font-size:1.35rem}
-    .dropdown-menu{background-color:#003366;border:none;padding:8px 10px}
-    .dropdown-item{color:#fff;font-weight:bold;cursor:pointer}
-    .dropdown-item:hover,.dropdown-item:focus{background-color:#cc7a00;color:#fff}
-    @media(max-width:991.98px){.navbar-brand{padding-left:20px!important}.navbar-toggler{margin-right:15px!important}.navbar-collapse{padding:0 25px 15px}.dropdown-menu{margin:0 10px!important;border-radius:8px}}
-    /* Hero */
-    .hero-section{background:linear-gradient(135deg,#003366 0%,#004080 60%,#002244 100%);padding:60px 0 50px;text-align:center}
-    .hero-section h1{color:#fff;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;line-height:1.2;margin-bottom:16px}
-    .hero-section h1 span{color:#f39c12}
-    .hero-section p{color:rgba(255,255,255,.82);font-size:1.05rem;max-width:620px;margin:0 auto 28px}
-    .hero-badge{display:inline-block;background:rgba(243,156,18,.2);border:1px solid rgba(243,156,18,.5);color:#f39c12;font-size:.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:20px}
-    /* Stats */
-    .stats-bar{background:#002244;border-bottom:2px solid #f39c12;padding:14px 0}
-    .stat-item{text-align:center;color:rgba(255,255,255,.6);font-size:.82rem}
-    .stat-item strong{display:block;font-size:1.4rem;font-weight:800;color:#f39c12;line-height:1;margin-bottom:3px}
-    /* Service buttons */
-    .service-btn{width:100%;background-color:#003366;color:#fff;font-weight:bold;border:none;padding:12px;transition:.3s;border-radius:50px;display:block;text-align:center;text-decoration:none;font-size:.9rem}
-    .service-btn:hover{background-color:#cc7a00;color:#fff;transform:translateY(-2px);box-shadow:0 6px 16px rgba(204,122,0,.3)}
-    /* Headings */
-    h1,h2,h3{font-weight:bold;color:#003366}
-    .section-eyebrow{display:block;font-size:.72rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#cc7a00;margin-bottom:8px}
-    /* Tools */
-    .tool-container{height:100%;padding:24px;background:#fff;border:1px solid #dde3ec;border-radius:10px;box-shadow:0 2px 12px rgba(0,51,102,.07)}
-    .tool-container h3{margin-top:0;color:#003366;font-size:1.1rem;text-align:left;margin-bottom:4px}
-    .tool-sub{font-size:.8rem;color:#888;margin-bottom:18px;font-style:italic}
-    .form-group{margin-bottom:14px}
-    .form-group label,.field label{display:block;margin-bottom:5px;font-weight:bold;font-size:.82rem;color:#003366}
-    .form-group input,.form-group select,.field select{width:100%;padding:9px 11px;border:1px solid #ccc;border-radius:6px;box-sizing:border-box;font-size:.9rem}
-    .field{margin-bottom:12px}
-    .tool-btn{width:100%;padding:11px;background-color:#003366;color:#fff;border:none;border-radius:8px;cursor:pointer;font-weight:bold;font-size:.95rem;transition:.3s;margin-top:4px}
-    .tool-btn:hover{background-color:#cc7a00;transform:translateY(-2px)}
-    /* Converter */
-    .converter-row{display:flex;align-items:flex-end;gap:8px;margin-bottom:4px}
-    .converter-select-wrap{flex:1}
-    .converter-select-wrap label{display:block;margin-bottom:5px;font-weight:bold;font-size:.82rem;color:#003366}
-    .converter-select-wrap select{width:100%;padding:9px 11px;border:1px solid #ccc;border-radius:6px}
-    .swap-btn{flex-shrink:0;width:36px;height:38px;background:#003366;color:#fff;border:none;border-radius:6px;font-size:1rem;cursor:pointer;transition:.2s;margin-bottom:1px}
-    .swap-btn:hover{background:#cc7a00}
-    #converter-result{margin-top:14px;padding:12px 14px;background:linear-gradient(135deg,#e8f0fe,#f0f4ff);border:1px solid #c5d5f5;border-radius:8px;text-align:center;display:none}
-    .conv-from{color:#555;font-weight:600;font-size:.88rem}
-    .conv-eq{margin:0 6px;color:#aaa}
-    .conv-to{color:#003366;font-weight:800;font-size:1.1rem}
-    .all-units-box{margin-top:12px;padding:12px;background:#f8f9fb;border:1px solid #e4e8f0;border-radius:8px}
-    .all-units-title{font-size:.72rem;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}
-    #all-units-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
-    .unit-chip{background:#fff;border:1px solid #e0e4ed;border-radius:6px;padding:7px 10px}
-    .unit-chip-active{border-color:#003366;background:#e8f0fe}
-    .unit-val{font-size:.85rem;font-weight:bold;color:#003366;display:block}
-    .unit-name{font-size:.72rem;color:#888;margin-top:1px;display:block}
-    /* Stamp results */
-    .results-card{display:none;margin-top:16px;padding:18px;background:#fff;border:1px solid #ddd;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,.07)}
-    .results-title{font-size:.88rem;font-weight:bold;color:#003366;margin-bottom:12px}
-    .result-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #f0f0f0;font-size:.85rem}
-    .result-label{color:#555}.result-value{font-weight:bold;color:#222}
-    .total-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0 6px;border-top:2px solid #003366;margin-top:6px}
-    .total-label{font-weight:bold;font-size:.95rem;color:#003366}
-    .total-value{font-weight:bold;font-size:1.15rem;color:#d9534f}
-    .note-box{margin-top:10px;padding:10px 12px;background:#fffbe6;border-left:3px solid #f39c12;border-radius:4px;font-size:.79rem;color:#555;line-height:1.6}
-    .reset-btn{margin-top:10px;width:100%;padding:8px;background:transparent;border:1px solid #003366;color:#003366;border-radius:6px;cursor:pointer;font-size:.85rem;font-weight:bold;transition:.2s}
-    .reset-btn:hover{background:#003366;color:#fff}
-    /* Rate card */
-    .rate-ref-card{background:#fff;border:1px solid #ddd;border-radius:10px;padding:16px;margin-top:16px}
-    .rate-ref-title{font-weight:bold;font-size:.88rem;color:#003366;margin-bottom:10px}
-    .rate-table{width:100%;border-collapse:collapse;font-size:.8rem}
-    .rate-table th,.rate-table td{border:1px solid #e0e0e0;padding:7px 8px;text-align:center}
-    .rate-table th{background:#f4f4f4;color:#003366;font-weight:bold}
-    .rate-table tr.highlight{background:#fff3cd;font-weight:bold}
-    .rate-table .badge{background:#003366;color:#fff;font-size:.65rem;border-radius:3px;padding:1px 5px;vertical-align:middle}
-    /* Checklist */
-    .checklist-item{display:flex;align-items:flex-start;margin-bottom:10px;font-size:.88rem;cursor:pointer;gap:8px}
-    .checklist-item input{margin-top:3px;width:16px;height:16px;cursor:pointer;flex-shrink:0;accent-color:#003366}
-    .checklist-item span{transition:color .2s;line-height:1.5}
-    .checklist-item input:checked+span{text-decoration:line-through;color:#888}
-    .progress-container{width:100%;background-color:#e9ecef;border-radius:4px;margin-bottom:6px;overflow:hidden}
-    .progress-bar-custom{height:9px;background-color:#003366;width:0%;transition:width .4s ease}
-    .progress-text{font-size:.78rem;font-weight:bold;margin-bottom:5px;text-align:right;color:#555}
-    /* Content cards */
-    .content-card{background:#fff;border:1px solid #dde3ec;border-radius:10px;padding:28px;box-shadow:0 2px 12px rgba(0,51,102,.07);margin-bottom:24px}
-    .content-card h2{font-size:1.5rem;margin-bottom:14px;text-align:left}
-    .content-card h3{font-size:1.15rem;margin-top:22px;margin-bottom:10px;text-align:left}
-    .content-card h4{font-size:1rem;margin-top:16px;margin-bottom:8px;color:#003366;font-weight:700;text-align:left}
-    .content-card p{margin-bottom:14px}
-    .content-card ul,.content-card ol{margin:10px 0 14px 20px}
-    .content-card li{margin-bottom:7px;line-height:1.65}
-    /* Steps */
-    .step-list{list-style:none;padding:0;margin:0;counter-reset:steps}
-    .step-item{counter-increment:steps;display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
-    .step-num{flex-shrink:0;width:32px;height:32px;background:#003366;color:#fff;font-weight:800;font-size:.85rem;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:1px}
-    .step-num::before{content:counter(steps)}
-    .step-title{font-weight:bold;color:#003366;margin-bottom:3px;font-size:.95rem}
-    .step-desc{font-size:.87rem;color:#555;line-height:1.6}
-    /* Callouts */
-    .callout{border-left:4px solid #f39c12;background:#fffbe6;padding:13px 16px;border-radius:0 6px 6px 0;margin:16px 0;font-size:.9rem;color:#444;line-height:1.65}
-    .callout-danger{border-left-color:#d9534f;background:#fff5f5}
-    .callout strong{color:#003366}
-    /* Tables */
-    .data-table{width:100%;border-collapse:collapse;font-size:.88rem;margin:16px 0}
-    .data-table th,.data-table td{border:1px solid #ddd;padding:10px 13px;text-align:left;vertical-align:top}
-    .data-table th{background:#f4f4f4;color:#003366;font-weight:bold}
-    .data-table tr:nth-child(even){background:#f9f9f9}
-    .data-table tr:hover{background:#f1f5ff}
-    .data-table .tick{color:#2e7d32;font-weight:bold}
-    .data-table .cross{color:#d9534f;font-weight:bold}
-    /* Cause cards */
-    .cause-card{background:#fff;border:1px solid #dde3ec;border-left:4px solid #003366;border-radius:0 10px 10px 0;padding:20px 22px;margin-bottom:14px;box-shadow:0 2px 8px rgba(0,51,102,.05)}
-    .cause-tag{display:inline-block;background:#003366;color:#fff;font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:2px 10px;border-radius:3px;margin-bottom:8px}
-    .cause-title{font-size:1rem;font-weight:700;color:#003366;margin-bottom:8px}
-    .cause-fix{margin-top:10px;padding:10px 13px;background:#f0f4ff;border-radius:6px;font-size:.85rem;color:#333}
-    /* FAQ */
-    .faq-card{background:#fff;border:1px solid #dde3ec;border-radius:8px;margin-bottom:10px;overflow:hidden}
-    .faq-q-btn{width:100%;background:none;border:none;padding:16px 20px;text-align:left;font-size:.95rem;font-weight:700;color:#003366;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;transition:background .2s}
-    .faq-q-btn:hover{background:#f0f4ff}
-    .faq-q-btn .chevron{flex-shrink:0;width:22px;height:22px;background:#e8edf5;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.7rem;color:#555;transition:transform .3s}
-    .faq-card.open .faq-q-btn{background:#f0f4ff}
-    .faq-card.open .chevron{transform:rotate(180deg);background:#003366;color:#fff}
-    .faq-answer{display:none;padding:14px 20px 16px;border-top:1px solid #eaeff7;font-size:.9rem;color:#444;line-height:1.75}
-    .faq-card.open .faq-answer{display:block}
-    /* Info boxes */
-    .info-box{background:#f0f4ff;border:1px solid #c5d5f5;border-radius:8px;padding:18px 20px;margin-bottom:16px}
-    .info-box-title{font-weight:bold;color:#003366;margin-bottom:10px;font-size:.95rem}
-    .info-box ul{margin:0;padding-left:18px}
-    .info-box li{font-size:.87rem;margin-bottom:6px;line-height:1.55}
-    /* TOC */
-    .toc-box{background:#fff;border:1px solid #dde3ec;border-radius:8px;padding:20px 24px;margin-bottom:28px}
-    .toc-box h4{color:#003366;font-size:.95rem;margin-bottom:12px;text-align:left}
-    .toc-box ol{margin:0;padding-left:20px;columns:2;gap:20px}
-    .toc-box li{font-size:.85rem;margin-bottom:6px}
-    .toc-box a{color:#003366;text-decoration:none}
-    .toc-box a:hover{color:#cc7a00;text-decoration:underline}
-    @media(max-width:576px){.toc-box ol{columns:1}}
-    /* Hierarchy */
-    .hierarchy-item{display:flex;gap:14px;align-items:flex-start;padding:13px 0;border-bottom:1px solid #eaeff7}
-    .hierarchy-item:last-child{border-bottom:none}
-    .hierarchy-num{flex-shrink:0;width:30px;height:30px;background:#cc7a00;color:#fff;font-size:.8rem;font-weight:800;border-radius:6px;display:flex;align-items:center;justify-content:center}
-    .hierarchy-title{font-weight:700;color:#003366;font-size:.9rem;margin-bottom:2px}
-    .hierarchy-desc{font-size:.82rem;color:#555;line-height:1.55}
-    /* Contact */
-    .contact-card{background:#fff;border:1px solid #dde3ec;border-radius:10px;padding:24px;text-align:center;box-shadow:0 2px 10px rgba(0,51,102,.06);height:100%}
-    .contact-icon-wrap{width:50px;height:50px;background:#003366;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin:0 auto 14px}
-    .contact-card h5{color:#003366;font-weight:700;margin-bottom:8px}
-    .contact-card p{font-size:.88rem;color:#555;margin:0;line-height:1.7}
-    .contact-card a{color:#003366;font-weight:600;text-decoration:none}
-    .contact-card a:hover{color:#cc7a00}
-    /* Misc */
-    [id]{scroll-margin-top:76px}
-    footer{font-size:.88rem}
-    .section-divider{height:4px;background:linear-gradient(90deg,#003366,#cc7a00,#003366);border:none;margin:0;opacity:1}
-    .tag-pill{display:inline-block;font-size:.73rem;font-weight:700;padding:2px 10px;border-radius:20px;margin-right:4px}
-    .tag-green{background:#e8f5e9;color:#2e7d32}
-    .tag-blue{background:#e8f0fe;color:#003366}
+    /* Smooth Scrolling for anchor links */
+    html {
+      scroll-behavior: smooth;
+      width : 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      background-color: #f5f7fa;
+      color: #222;
+    }
+
+    /* Header & Footer - Blue Theme */
+    .bg-custom {
+      background-color: #003366;
+    }
+    .navbar-brand {
+      padding-left: 10px;
+    }
+    .dropdown-menu {
+      margin-left: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    header a,
+    footer,
+    footer a {
+      color: #ffffff !important;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Dropdown menu fix */
+    .dropdown-menu {
+      background-color: #003366;
+      border: none;
+    }
+
+    .dropdown-item {
+      color: #ffffff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .dropdown-item:hover,
+    .dropdown-item:focus {
+      background-color: #f39c12;
+      color: #ffffff;
+    }
+
+    /* Mobile-specific spacing */
+    @media (max-width: 991.98px) {
+        .navbar-brand { padding-left: 20px !important; }
+        .navbar-toggler { margin-right: 15px !important; }
+        .navbar-collapse { padding: 0 25px 15px; }
+        .dropdown-menu { margin: 0 10px !important; border-radius: 8px; }
+    }
+
+    /* Service Buttons */
+    .service-btn {
+      width: 100%;
+      margin: 0;
+      background-color: #003366;
+      color: #ffffff;
+      font-weight: bold;
+      border: none;
+      padding: 12px;
+      transition: 0.3s;
+      border-radius: 50px;
+      display: block;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .service-btn:hover {
+      background-color: #cc7a00;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+  
+.other-services-trigger {
+    display: block;    
+}
+    
+   h1, h2, h3 {
+    font-weight: bold;
+    text-align: center;
+    color: #003366;
+    margin-top: 30px;
+   }
+
+    footer { font-size: 14px; }
+    
+    /* Blog Images */
+    .blog-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+    .blog-image img {
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+        
+    /* Data Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-size: 16px;
+        text-align: left;
+    }
+
+    th, td { border: 1px solid #ddd; padding: 12px; word-break: break-word; }
+    th { background-color: #f4f4f4; color: #003366; }
+    tr:nth-child(even) { background-color: #f9f9f9; }
+    tr:hover { background-color: #f1f1f1; }
+    /* Custom Interactive Tools CSS */
+    .tool-container { height: 100%; padding: 20px; background: #ffffff; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+    .tool-container h3 { margin-top: 0; color: #003366; font-size: 1.2rem; text-align: left;}
+    .form-group { margin-bottom: 15px; }
+    .form-group label { display: block; margin-bottom: 5px; font-weight: bold; font-size: 14px; }
+    .form-group input, .form-group select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+    .tool-btn { width: 100%; padding: 10px; background-color: #003366; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 16px; transition: 0.3s;}
+    .tool-btn:hover { background-color: #cc7a00; transform: translateY(-2px);}
+    
+    /* Converter Specific */
+    #converter-result { margin-top: 15px; padding: 12px 14px; background: linear-gradient(135deg, #e8f0fe, #f0f4ff); border: 1px solid #c5d5f5; border-radius: 8px; text-align: center; font-size: 15px; display: none; }
+    .conv-from { color: #555; font-weight: 600; }
+    .conv-eq { margin: 0 8px; color: #888; font-size: 18px; }
+    .conv-to { color: #003366; font-weight: 800; font-size: 17px; }
+    .converter-row { display: flex; align-items: flex-end; gap: 8px; margin-bottom: 4px; }
+    .converter-select-wrap { flex: 1; }
+    .converter-select-wrap label { display: block; margin-bottom: 5px; font-weight: bold; font-size: 14px; }
+    .converter-select-wrap select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+    .swap-btn { flex-shrink: 0; width: 36px; height: 38px; background: #003366; color: #fff; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; transition: 0.2s; margin-bottom: 1px; }
+    .swap-btn:hover { background: #cc7a00; }
+    .all-units-box { margin-top: 14px; padding: 12px; background: #f8f9fb; border: 1px solid #e4e8f0; border-radius: 8px; }
+    .all-units-title { font-size: 12px; font-weight: bold; color: #888; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
+    #all-units-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+    .unit-chip { background: #fff; border: 1px solid #e0e4ed; border-radius: 6px; padding: 7px 10px; display: flex; flex-direction: column; }
+    .unit-chip-active { border-color: #003366; background: #e8f0fe; }
+    .unit-val { font-size: 13px; font-weight: bold; color: #003366; }
+    .unit-name { font-size: 11px; color: #888; margin-top: 2px; }
+    
+    /* Stamp Duty Calculator Specific */
+    .input-wrap { position: relative; display: flex; align-items: center; }
+    .input-prefix { position: absolute; left: 10px; font-weight: bold; color: #555; font-size: 15px; pointer-events: none; }
+    .input-wrap input { padding-left: 26px !important; }
+    .hint { display: block; font-size: 11px; color: #888; margin-top: 4px; }
+    .field { margin-bottom: 12px; }
+    .field label { display: block; margin-bottom: 5px; font-weight: bold; font-size: 14px; }
+    .field select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+    .calc-btn { width: 100%; padding: 11px; background-color: #003366; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 15px; transition: 0.3s; margin-top: 6px; }
+    .calc-btn:hover { background-color: #cc7a00; transform: translateY(-2px); }
+
+    /* Results Card */
+    .results-card { display: none; margin-top: 16px; padding: 18px; background: #fff; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.07); }
+    .results-title { font-size: 15px; font-weight: bold; color: #003366; margin-bottom: 12px; }
+    .property-summary { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+    .summary-pill { background: #e8f0fe; color: #003366; border-radius: 20px; padding: 4px 12px; font-size: 12px; font-weight: bold; }
+    .result-rows { margin-bottom: 10px; }
+    .result-row { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; border-bottom: 1px solid #f0f0f0; font-size: 13px; animation: fadeIn 0.3s ease both; }
+    @keyframes fadeIn { from { opacity:0; transform: translateY(4px); } to { opacity:1; transform: none; } }
+    .result-label { display: flex; align-items: center; gap: 6px; color: #444; }
+    .dot { display: inline-block; width: 7px; height: 7px; background: #003366; border-radius: 50%; flex-shrink: 0; }
+    .result-value { font-weight: bold; color: #222; text-align: right; }
+    .result-pct { font-size: 11px; font-weight: normal; color: #888; margin-left: 5px; }
+    .total-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0 6px; border-top: 2px solid #003366; margin-top: 6px; }
+    .total-label { font-weight: bold; font-size: 15px; color: #003366; }
+    .total-value { font-weight: bold; font-size: 18px; color: #d9534f; }
+    .note-box { margin-top: 12px; padding: 10px 12px; background: #fffbe6; border-left: 3px solid #f39c12; border-radius: 4px; font-size: 12px; color: #555; line-height: 1.6; }
+    .reset-btn { margin-top: 12px; width: 100%; padding: 8px; background: transparent; border: 1px solid #003366; color: #003366; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: bold; transition: 0.2s; }
+    .reset-btn:hover { background: #003366; color: #fff; }
+
+    /* Rate Reference Card */
+    .card { background: #fff; border: 1px solid #ddd; border-radius: 10px; padding: 18px; margin-top: 16px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+    .card-title { display: flex; align-items: center; gap: 10px; font-weight: bold; font-size: 15px; color: #003366; margin-bottom: 14px; }
+    .card .icon { width: 28px; height: 28px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 13px; color: #fff; flex-shrink: 0; background: #003366; }
+    --slate: #6c757d;
+    .rate-table { width: 100%; border-collapse: collapse; font-size: 12px; margin: 0; }
+    .rate-table th, .rate-table td { border: 1px solid #e0e0e0; padding: 7px 8px; text-align: center; }
+    .rate-table th { background: #f4f4f4; color: #003366; font-weight: bold; }
+    .rate-table tr.highlight { background: #fff3cd; font-weight: bold; }
+    .rate-table .badge { background: #003366; color: #fff; font-size: 10px; border-radius: 4px; padding: 1px 5px; vertical-align: middle; }
+    
+    /* Checklist Specific */
+    .checklist-item { display: flex; align-items: flex-start; margin-bottom: 10px; font-size: 14px; cursor: pointer; }
+    .checklist-item input { margin-right: 10px; margin-top: 4px; width: 16px; height: 16px; cursor: pointer;}
+    .checklist-item span { transition: color 0.2s; }
+    .checklist-item input:checked + span { text-decoration: line-through; color: #888; }
+    .progress-container { width: 100%; background-color: #e9ecef; border-radius: 4px; margin-bottom: 15px; overflow: hidden;}
+    .progress-bar-custom { height: 10px; background-color: #28a745; width: 0%; transition: width 0.4s ease; }
+    .progress-text { font-size: 12px; font-weight: bold; margin-bottom: 5px; text-align: right; color: #555;}
   </style>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4061167980012817"
-     crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4061167980012817" crossorigin="anonymous"></script>
 </head>
-
 <body>
-
 <header class="bg-custom">
   <nav class="navbar navbar-expand-lg navbar-dark container-fluid">
-    <a class="navbar-brand d-flex align-items-center fw-bold text-white" href="/">
-      Bhoomi
-    </a>
-    
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-      data-bs-target="#navbarNav" aria-controls="navbarNav"
-      aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
+    <a class="navbar-brand d-flex align-items-center fw-bold text-white" href="/">Bhoomi</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-  
-       <li class="nav-item">
-          <a class="nav-link fw-bold text-white" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-bold text-white" href="/dishaank.html">Dishaank</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-bold text-white" href="/about-us.html">About Us</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link fw-bold text-white" href="/privacy-policy.html">Privacy Policy</a>
-        </li>
+        <li class="nav-item"><a class="nav-link fw-bold text-white" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold text-white" href="/dishaank.html">Dishaank</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold text-white" href="/about-us.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold text-white" href="/privacy-policy.html">Privacy Policy</a></li>
       </ul>
     </div>
   </nav>
@@ -213,16 +238,10 @@
 <div class="container-fluid my-4">
 
   <h1>Bhoomi</h1>
-  <p>
-    Bhoomi is the official digital land records management system launched by the Government of Karnataka.
-    It was created to digitize paper records, making them transparent, tamper-proof, and easily accessible to citizens.
-  </p>
-  <p>
-    The most important document you can access here is the RTC (Record of Rights, Tenancy and Crops), locally known as Pahani.
-    Whether you are a farmer applying for a loan or a landowner verifying property details, the Bhoomi portal eliminates the need to visit government offices, allowing you to access records from your home.
-  </p>
+  <p>Bhoomi is the official digital land records management system launched by the Government of Karnataka. It was created to digitize paper records, making them transparent, tamper-proof, and easily accessible to citizens.</p>
+  <p>The most important document you can access here is the RTC (Record of Rights, Tenancy and Crops), locally known as Pahani. Whether you are a farmer applying for a loan or a landowner verifying property details, the Bhoomi portal eliminates the need to visit government offices, allowing you to access records from your home.</p>
 
-  <h2 id="dashboard" class="mb-4" style="padding-top: 60px; margin-top: -30px;">Bhoomi Services Dashboard</h2>
+  <h2 id="dashboard" class="mb-4" style="padding-top:60px;margin-top:-30px;">Bhoomi Services Dashboard</h2>
   <div class="row g-3 mb-4">
     <div class="col-md-4 col-6"><a class="btn service-btn" href="https://landrecords.karnataka.gov.in/">Bhoomi RTC</a></div>
     <div class="col-md-4 col-6"><a class="btn service-btn" href="https://www.landrecords.karnataka.gov.in/citizenportal/">Citizen Registration</a></div>
@@ -232,193 +251,60 @@
     <div class="col-md-4 col-6"><a class="btn service-btn" href="https://rtc.karnataka.gov.in/Service78/">i-RTC Wallet</a></div>
     <div class="col-md-4 col-6"><a class="btn service-btn" href="https://landrecords.karnataka.gov.in/Service11/MR_MutationExtract.aspx">Mutation Extract</a></div>
     <div class="col-md-4 col-6"><a class="btn service-btn" href="https://landrecords.karnataka.gov.in/service2/forM16A.aspx">RTC Sketch</a></div>
-   
     <div class="col-md-4 col-6"><a class="btn service-btn" href="https://landrecords.karnataka.gov.in/Service12/MutationStatus.aspx">Mutation Status</a></div>
     <div class="col-md-4 col-6"><a class="btn service-btn" href="https://landrecords.karnataka.gov.in/citizenportal/">Land Conversion</a></div>
     <div class="col-md-4 col-6"><a class="btn service-btn" href="https://bhoomojini.karnataka.gov.in/index.html">Mojini v3</a></div>
     <div class="col-md-4 col-6"><a class="btn service-btn" href="https://bhoomirtc.net.in/dishaank.html">Dishaank App</a></div>
-    
     <div class="col-12 col-md-4 more-services mx-auto">
-            <button type="button" class="btn service-btn other-services-trigger" data-bs-toggle="modal" data-bs-target="#otherServicesModal">
-                Other Services
-            </button>
-        </div>
-</div>
-  <h2 class="mb-4">Property Calculators & Verification Tools</h2>
+      <button type="button" class="btn service-btn other-services-trigger" data-bs-toggle="modal" data-bs-target="#otherServicesModal">Other Services</button>
+    </div>
+  </div>
+
+  <h2 class="mb-4">Property Calculators &amp; Verification Tools</h2>
   <div class="row g-4 mb-5">
-    
     <div class="col-lg-4 col-md-12">
       <div class="tool-container">
         <h3>Land Area Converter</h3>
-
-        <div class="form-group">
-          <label>Enter Value</label>
-          <input type="number" id="area-input" placeholder="e.g. 2.5" min="0" step="any" oninput="convertArea()">
-        </div>
-
+        <div class="form-group"><label>Enter Value</label><input type="number" id="area-input" placeholder="e.g. 2.5" min="0" step="any" oninput="convertArea()"></div>
         <div class="converter-row">
-          <div class="converter-select-wrap">
-            <label>From</label>
-            <select id="unit-from" onchange="convertArea()">
-              <option value="sqft">Square Feet</option>
-              <option value="sqm">Square Metres</option>
-              <option value="gunta" selected>Gunta / Guntha</option>
-              <option value="cent">Cent</option>
-              <option value="acre">Acre</option>
-              <option value="bigha">Bigha (Karnataka)</option>
-              <option value="hectare">Hectare</option>
-            </select>
-          </div>
+          <div class="converter-select-wrap"><label>From</label><select id="unit-from" onchange="convertArea()"><option value="sqft">Square Feet</option><option value="sqm">Square Metres</option><option value="gunta" selected>Gunta / Guntha</option><option value="cent">Cent</option><option value="acre">Acre</option><option value="bigha">Bigha (Karnataka)</option><option value="hectare">Hectare</option></select></div>
           <button class="swap-btn" onclick="swapUnits()" title="Swap units">⇄</button>
-          <div class="converter-select-wrap">
-            <label>To</label>
-            <select id="unit-to" onchange="convertArea()">
-              <option value="sqft">Square Feet</option>
-              <option value="sqm">Square Metres</option>
-              <option value="gunta">Gunta / Guntha</option>
-              <option value="cent">Cent</option>
-              <option value="acre" selected>Acre</option>
-              <option value="bigha">Bigha (Karnataka)</option>
-              <option value="hectare">Hectare</option>
-            </select>
-          </div>
+          <div class="converter-select-wrap"><label>To</label><select id="unit-to" onchange="convertArea()"><option value="sqft">Square Feet</option><option value="sqm">Square Metres</option><option value="gunta">Gunta / Guntha</option><option value="cent">Cent</option><option value="acre" selected>Acre</option><option value="bigha">Bigha (Karnataka)</option><option value="hectare">Hectare</option></select></div>
         </div>
-
         <div id="converter-result"></div>
-
-        <div class="all-units-box" id="all-units-box" style="display:none;">
-          <div class="all-units-title">All Equivalents</div>
-          <div id="all-units-grid"></div>
-        </div>
+        <div class="all-units-box" id="all-units-box" style="display:none;"><div class="all-units-title">All Equivalents</div><div id="all-units-grid"></div></div>
       </div>
     </div>
-
-
     <div class="col-lg-4 col-md-12">
-    <div class="tool-container">
-      <h3>Stamp Duty Calculator</h3>
-      <div class="form-group">
-        <label>Property / Market Value (₹)</label>
-        <div class="input-wrap">
-          <span class="input-prefix">₹</span>
-          <input type="number" id="propValue" placeholder="e.g. 5000000" min="0" step="1000">
+      <div class="tool-container">
+        <h3>Stamp Duty Calculator</h3>
+        <div class="form-group"><label>Property / Market Value (₹)</label><div class="input-wrap"><span class="input-prefix">₹</span><input type="number" id="propValue" placeholder="e.g. 5000000" min="0" step="1000"></div><span class="hint">Enter the higher of sale price or government guidance value</span></div>
+        <div class="field"><label>Document Type</label><select id="docType"><option value="sale">Sale Deed</option><option value="gift_family">Gift Deed (Family)</option><option value="gift_other">Gift Deed (Non-Family)</option><option value="partition">Partition Deed</option><option value="mortgage">Mortgage Deed</option><option value="lease">Lease (above 1yr)</option><option value="exchange">Exchange Deed</option><option value="settlement">Settlement Deed (Family)</option></select></div>
+        <div class="field"><label>Property Location</label><select id="location"><option value="bbmp">BBMP (Bengaluru City)</option><option value="bda">BDA / City Municipal</option><option value="town">Town Panchayat / CMC</option><option value="gram">Gram Panchayat (Rural)</option></select></div>
+        <div class="field"><label>Ownership Type</label><select id="ownership"><option value="individual">Individual</option><option value="joint">Joint (any combination)</option></select></div>
+        <div class="field"><label>Property Type</label><select id="propType"><option value="residential">Residential</option><option value="commercial">Commercial</option><option value="agricultural">Agricultural</option><option value="industrial">Industrial</option></select></div>
+        <button class="calc-btn" onclick="calculate()">Calculate Stamp Duty &amp; Registration Fees →</button>
+        <div class="results-card" id="results">
+          <div class="results-title">Fee Breakdown</div>
+          <div class="property-summary" id="propertySummary"></div>
+          <div class="result-rows" id="resultRows"></div>
+          <div class="total-row"><div class="total-label">Total Payable</div><div class="total-value" id="totalValue">—</div></div>
+          <div class="note-box" id="noteBox"></div>
+          <button class="reset-btn" onclick="reset()">↺ Recalculate</button>
         </div>
-        <span class="hint">Enter the higher of sale price or government guidance value</span>
-      </div>
-
-      <div class="field">
-        <label>Document Type</label>
-        <select id="docType">
-          <option value="sale">Sale Deed</option>
-          <option value="gift_family">Gift Deed (Family)</option>
-          <option value="gift_other">Gift Deed (Non-Family)</option>
-          <option value="partition">Partition Deed</option>
-          <option value="mortgage">Mortgage Deed</option>
-          <option value="lease">Lease (above 1yr)</option>
-          <option value="exchange">Exchange Deed</option>
-          <option value="settlement">Settlement Deed (Family)</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label>Property Location</label>
-        <select id="location">
-          <option value="bbmp">BBMP (Bengaluru City)</option>
-          <option value="bda">BDA / City Municipal</option>
-          <option value="town">Town Panchayat / CMC</option>
-          <option value="gram">Gram Panchayat (Rural)</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label>Ownership Type</label>
-        <select id="ownership">
-          <option value="individual">Individual</option>
-          <option value="joint">Joint (any combination)</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label>Property Type</label>
-        <select id="propType">
-          <option value="residential">Residential</option>
-          <option value="commercial">Commercial</option>
-          <option value="agricultural">Agricultural</option>
-          <option value="industrial">Industrial</option>
-        </select>
-      </div>
-
-      <button class="calc-btn" onclick="calculate()">Calculate Stamp Duty &amp; Registration Fees →</button>
-
-      <!-- Results -->
-      <div class="results-card" id="results">
-        <div class="results-title"> Fee Breakdown</div>
-        <div class="property-summary" id="propertySummary"></div>
-        <div class="result-rows" id="resultRows"></div>
-        <div class="total-row">
-          <div class="total-label">Total Payable</div>
-          <div class="total-value" id="totalValue">—</div>
+        <div class="card">
+          <div class="card-title">Official Rate Reference</div>
+          <p style="font-size:13px;color:rgba(61,50,40,.6);margin-bottom:18px;">Stamp duty slabs for <strong>Sale Deed</strong> as per Karnataka Stamps Act (effective Aug 2025):</p>
+          <table class="rate-table"><thead><tr><th>Property Value</th><th>Stamp Duty</th><th>Reg. Fee <span class="badge">2025</span></th><th>Cess + Surcharge</th><th>Effective Total</th></tr></thead><tbody><tr><td>Below ₹20 Lakh</td><td>2%</td><td>2%</td><td>0.6%</td><td>4.6%</td></tr><tr><td>₹20 Lakh – ₹45 Lakh</td><td>3%</td><td>2%</td><td>0.6%</td><td>5.6%</td></tr><tr class="highlight"><td>Above ₹45 Lakh</td><td>5%</td><td>2%</td><td>0.6%</td><td><strong>7.6%</strong></td></tr></tbody></table>
+          <p style="font-size:11px;color:rgba(61,50,40,.45);margin-top:14px;">* Registration fee revised from 1% → 2% effective <strong>31 August 2025</strong>. Cess: 0.5%, Surcharge: 0.1%.</p>
         </div>
-        <div class="note-box" id="noteBox"></div>
-        <button class="reset-btn" onclick="reset()">↺ Recalculate</button>
-      </div>
-
-      <!-- Rate Reference Card -->
-      <div class="card">
-        <div class="card-title">
-          Official Rate Reference
-        </div>
-        <p style="font-size:13px; color:rgba(61,50,40,0.6); margin-bottom:18px;">Stamp duty slabs for <strong>Sale Deed</strong> as per Karnataka Stamps Act (effective Aug 2025):</p>
-        <table class="rate-table">
-          <thead>
-            <tr>
-              <th>Property Value</th>
-              <th>Stamp Duty</th>
-              <th>Reg. Fee <span class="badge">2025</span></th>
-              <th>Cess + Surcharge</th>
-              <th>Effective Total</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Below ₹20 Lakh</td>
-              <td>2%</td>
-              <td>2%</td>
-              <td>0.6%</td>
-              <td>4.6%</td>
-            </tr>
-            <tr>
-              <td>₹20 Lakh – ₹45 Lakh</td>
-              <td>3%</td>
-              <td>2%</td>
-              <td>0.6%</td>
-              <td>5.6%</td>
-            </tr>
-            <tr class="highlight">
-              <td>Above ₹45 Lakh</td>
-              <td>5%</td>
-              <td>2%</td>
-              <td>0.6%</td>
-              <td><strong>7.6%</strong></td>
-            </tr>
-          </tbody>
-        </table>
-        <p style="font-size:11px; color:rgba(61,50,40,0.45); margin-top:14px;">
-          * Registration fee revised from 1% → 2% effective <strong>31 August 2025</strong>. Cess: 0.5%, Surcharge: 0.1%.
-          Gift deeds within family attract fixed duty (₹1,000–₹5,000). Rates may vary by property type and location.
-        </p>
       </div>
     </div>
-    </div>
-
-
     <div class="col-lg-4 col-md-12">
       <div class="tool-container">
         <h3>Buyer's Document Checklist</h3>
         <div class="progress-text" id="progress-text">0% Completed</div>
-        <div class="progress-container">
-          <div class="progress-bar-custom" id="progress-bar"></div>
-        </div>
+        <div class="progress-container"><div class="progress-bar-custom" id="progress-bar"></div></div>
         <div id="checklist">
           <label class="checklist-item"><input type="checkbox" onchange="updateProgress()"><span>Latest RTC (Pahani)</span></label>
           <label class="checklist-item"><input type="checkbox" onchange="updateProgress()"><span>Mutation Register Extract</span></label>
@@ -429,658 +315,511 @@
         </div>
       </div>
     </div>
-
   </div>
 
   <script>
-    // Tool 1 Logic
-    const toSqFt = {
-      sqft: 1,
-      sqm: 10.7639,
-      gunta: 1089,
-      cent: 435.6,
-      acre: 43560,
-      bigha: 14400,
-      hectare: 107639.104
-    };
-    const unitLabels = {
-      sqft: 'Sq. Feet', sqm: 'Sq. Metres', gunta: 'Gunta', cent: 'Cent',
-      acre: 'Acre', bigha: 'Bigha', hectare: 'Hectare'
-    };
-
-    function fmtArea(n) {
-      if (n >= 1000000) return (n / 1000000).toFixed(4) + 'M';
-      if (n < 0.0001) return n.toExponential(3);
-      if (n < 0.01) return n.toFixed(6);
-      if (n < 1) return n.toFixed(4);
-      if (n < 100) return n.toFixed(4);
-      return parseFloat(n.toFixed(4)).toLocaleString('en-IN');
-    }
-
-    function convertArea() {
-      const inputValue = parseFloat(document.getElementById('area-input').value);
-      const fromUnit = document.getElementById('unit-from').value;
-      const toUnit = document.getElementById('unit-to').value;
-      const resultDiv = document.getElementById('converter-result');
-      const allBox = document.getElementById('all-units-box');
-      const allGrid = document.getElementById('all-units-grid');
-
-      if (!document.getElementById('area-input').value || isNaN(inputValue) || inputValue < 0) {
-        resultDiv.style.display = 'none';
-        allBox.style.display = 'none';
-        return;
-      }
-
-      const valueInSqFt = inputValue * toSqFt[fromUnit];
-      const finalValue = valueInSqFt / toSqFt[toUnit];
-
-      resultDiv.style.display = 'block';
-      resultDiv.innerHTML = `
-        <span class="conv-from">${parseFloat(inputValue.toFixed(4)).toLocaleString('en-IN')} ${unitLabels[fromUnit]}</span>
-        <span class="conv-eq">=</span>
-        <span class="conv-to">${fmtArea(finalValue)} ${unitLabels[toUnit]}</span>
-      `;
-
-      // All units
-      allBox.style.display = 'block';
-      let gridHTML = '';
-      Object.keys(toSqFt).forEach(unit => {
-        const val = valueInSqFt / toSqFt[unit];
-        const isActive = unit === toUnit;
-        gridHTML += `<div class="unit-chip ${isActive ? 'unit-chip-active' : ''}">
-          <span class="unit-val">${fmtArea(val)}</span>
-          <span class="unit-name">${unitLabels[unit]}</span>
-        </div>`;
-      });
-      allGrid.innerHTML = gridHTML;
-    }
-
-    function swapUnits() {
-      const from = document.getElementById('unit-from');
-      const to = document.getElementById('unit-to');
-      [from.value, to.value] = [to.value, from.value];
-      convertArea();
-    }
-
-    // Tool 2 Logic
-    function fmt(n) {
-    return '₹' + Math.round(n).toLocaleString('en-IN');
-  }
-
-  function getStampDutyRate(value, docType) {
-    if (docType === 'gift_family') return { rate: 0, fixed: true, fixedAmt: 5000, label: 'Fixed (Family Gift)' };
-    if (docType === 'settlement') return { rate: 0, fixed: true, fixedAmt: 1000, label: 'Fixed (Family Settlement)' };
-    if (docType === 'partition') return { rate: 0.01, fixed: false, label: '1%' }; // simplified
-    if (docType === 'mortgage') return { rate: 0.005, fixed: false, label: '0.5%' };
-    if (docType === 'lease') return { rate: 0.005, fixed: false, label: '0.5% of avg annual rent' };
-    if (docType === 'exchange') return { rate: 0.05, fixed: false, label: '5%' };
-    if (docType === 'gift_other') {
-      // Same as sale deed
-    }
-    // Sale deed / Gift to non-family — slab based
-    if (value < 2000000) return { rate: 0.02, fixed: false, label: '2%' };
-    if (value <= 4500000) return { rate: 0.03, fixed: false, label: '3%' };
-    return { rate: 0.05, fixed: false, label: '5%' };
-  }
-
-  function getRegFee(value, docType) {
-    if (['gift_family', 'settlement', 'partition'].includes(docType)) return 0.01; // 1% for these
-    return 0.02; // 2% from Aug 2025
-  }
-
-  function calculate() {
-    const valueInput = document.getElementById('propValue').value;
-    if (!valueInput || parseFloat(valueInput) <= 0) {
-      alert('Please enter a valid property value.');
-      return;
-    }
-    const value = parseFloat(valueInput);
-    const docType = document.getElementById('docType').value;
-    const location = document.getElementById('location').value;
-    const ownership = document.getElementById('ownership').value;
-    const propType = document.getElementById('propType').value;
-
-    const sdInfo = getStampDutyRate(value, docType);
-    let stampDuty = sdInfo.fixed ? sdInfo.fixedAmt : value * sdInfo.rate;
-
-    const regRate = getRegFee(value, docType);
-    const regFee = value * regRate;
-
-    // Cess (0.5% on stamp duty)
-    const cess = stampDuty * 1.0; // 0.5% of property value approx
-    const cessOnProp = value * 0.005;
-    const surcharge = value * 0.001;
-
-    // Additional charges for certain locations
-    let locationNote = '';
-    let additionalAmt = 0;
-
-    if (location === 'bbmp') locationNote = 'BBMP area — standard urban rates apply.';
-    else if (location === 'bda') locationNote = 'BDA / City Municipal area — standard rates apply.';
-    else if (location === 'town') { locationNote = 'Town Panchayat area.'; additionalAmt = 0; }
-    else { locationNote = 'Gram Panchayat (rural) — some concessions may apply; verify locally.'; }
-
-    // Agricultural concession
-    let propTypeNote = '';
-    if (propType === 'agricultural') propTypeNote = ' Agricultural land: lower circle rates may apply.';
-
-    const total = stampDuty + regFee + cessOnProp + surcharge + additionalAmt;
-
-    // Build results
-    const resultsEl = document.getElementById('results');
-    resultsEl.style.display = 'block';
-    resultsEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-    // Summary pills
-    const docLabels = {
-      sale: 'Sale Deed', gift_family: 'Gift Deed (Family)', gift_other: 'Gift Deed',
-      partition: 'Partition Deed', mortgage: 'Mortgage Deed', lease: 'Lease Deed',
-      exchange: 'Exchange Deed', settlement: 'Settlement Deed'
-    };
-    const locLabels = {
-      bbmp: 'BBMP – Bengaluru', bda: 'BDA / City Municipal', town: 'Town Panchayat', gram: 'Gram Panchayat'
-    };
-
-    document.getElementById('propertySummary').innerHTML = `
-      <div class="summary-pill">${fmt(value)}</div>
-      <div class="summary-pill">${docLabels[docType]}</div>
-      <div class="summary-pill">${locLabels[location]}</div>
-    `;
-
-    const rows = [
-      { label: 'Property Value', value: fmt(value), pct: '' },
-      { label: `Stamp Duty (${sdInfo.label})`, value: fmt(stampDuty), pct: sdInfo.fixed ? 'Fixed' : `${(sdInfo.rate * 100).toFixed(0)}% of value` },
-      { label: `Registration Fee (${(regRate * 100).toFixed(0)}%)`, value: fmt(regFee), pct: `${(regRate * 100).toFixed(0)}% of value` },
-      { label: 'CESS (0.5%)', value: fmt(cessOnProp), pct: '0.5% of value' },
-      { label: 'Surcharge (0.1%)', value: fmt(surcharge), pct: '0.1% of value' },
-    ];
-
-    let rowsHTML = '';
-    rows.forEach((r, i) => {
-      rowsHTML += `
-        <div class="result-row" style="animation-delay:${0.05 + i * 0.05}s">
-          <div class="result-label"><span class="dot"></span>${r.label}</div>
-          <div class="result-value">${r.value} <span class="result-pct">${r.pct}</span></div>
-        </div>`;
-    });
-    document.getElementById('resultRows').innerHTML = rowsHTML;
-    document.getElementById('totalValue').textContent = fmt(total);
-
-    const effectivePct = ((total / value) * 100).toFixed(2);
-    document.getElementById('noteBox').innerHTML = `
-      <strong>Note:</strong> Total effective rate: ${effectivePct}% of property value.
-      ${locationNote}${propTypeNote}
-      Stamp duty is calculated on the higher of the declared price or the government guidance (circle) value.
-      Registration fee revised to 2% from <strong>31 Aug 2025</strong>.
-      Verify current circle rates on <strong>Kaveri 2.0 portal</strong> before finalising your transaction.
-    `;
-  }
-
-  function reset() {
-    document.getElementById('results').style.display = 'none';
-    document.getElementById('propValue').value = '';
-    document.getElementById('propValue').focus();
-  }
-
-  // Allow Enter key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') calculate();
-  });
-    // Tool 3 Logic
-    function updateProgress() {
-      const checkboxes = document.querySelectorAll('#checklist input[type="checkbox"]');
-      let checked = 0;
-      checkboxes.forEach(box => { if (box.checked) checked++; });
-      const percentage = Math.round((checked / checkboxes.length) * 100);
-      document.getElementById('progress-bar').style.width = percentage + '%';
-      document.getElementById('progress-text').innerText = percentage + '% Completed';
-    }
+    const toSqFt={sqft:1,sqm:10.7639,gunta:1089,cent:435.6,acre:43560,bigha:14400,hectare:107639.104};
+    const unitLabels={sqft:'Sq. Feet',sqm:'Sq. Metres',gunta:'Gunta',cent:'Cent',acre:'Acre',bigha:'Bigha',hectare:'Hectare'};
+    function fmtArea(n){if(n>=1000000)return(n/1000000).toFixed(4)+'M';if(n<0.0001)return n.toExponential(3);if(n<0.01)return n.toFixed(6);if(n<1)return n.toFixed(4);if(n<100)return n.toFixed(4);return parseFloat(n.toFixed(4)).toLocaleString('en-IN');}
+    function convertArea(){const iv=parseFloat(document.getElementById('area-input').value),fu=document.getElementById('unit-from').value,tu=document.getElementById('unit-to').value,rd=document.getElementById('converter-result'),ab=document.getElementById('all-units-box'),ag=document.getElementById('all-units-grid');if(!document.getElementById('area-input').value||isNaN(iv)||iv<0){rd.style.display='none';ab.style.display='none';return;}const vsf=iv*toSqFt[fu],fv=vsf/toSqFt[tu];rd.style.display='block';rd.innerHTML=`<span class="conv-from">${parseFloat(iv.toFixed(4)).toLocaleString('en-IN')} ${unitLabels[fu]}</span><span class="conv-eq">=</span><span class="conv-to">${fmtArea(fv)} ${unitLabels[tu]}</span>`;ab.style.display='block';let g='';Object.keys(toSqFt).forEach(u=>{const v=vsf/toSqFt[u],ia=u===tu;g+=`<div class="unit-chip ${ia?'unit-chip-active':''}"><span class="unit-val">${fmtArea(v)}</span><span class="unit-name">${unitLabels[u]}</span></div>`;});ag.innerHTML=g;}
+    function swapUnits(){const f=document.getElementById('unit-from'),t=document.getElementById('unit-to');[f.value,t.value]=[t.value,f.value];convertArea();}
+    function fmt(n){return'₹'+Math.round(n).toLocaleString('en-IN');}
+    function getStampDutyRate(v,d){if(d==='gift_family')return{rate:0,fixed:true,fixedAmt:5000,label:'Fixed (Family Gift)'};if(d==='settlement')return{rate:0,fixed:true,fixedAmt:1000,label:'Fixed (Family Settlement)'};if(d==='partition')return{rate:0.01,fixed:false,label:'1%'};if(d==='mortgage')return{rate:0.005,fixed:false,label:'0.5%'};if(d==='lease')return{rate:0.005,fixed:false,label:'0.5%'};if(d==='exchange')return{rate:0.05,fixed:false,label:'5%'};if(v<2000000)return{rate:0.02,fixed:false,label:'2%'};if(v<=4500000)return{rate:0.03,fixed:false,label:'3%'};return{rate:0.05,fixed:false,label:'5%'};}
+    function getRegFee(v,d){if(['gift_family','settlement','partition'].includes(d))return 0.01;return 0.02;}
+    function calculate(){const vi=document.getElementById('propValue').value;if(!vi||parseFloat(vi)<=0){alert('Please enter a valid property value.');return;}const v=parseFloat(vi),d=document.getElementById('docType').value,loc=document.getElementById('location').value,pt=document.getElementById('propType').value,si=getStampDutyRate(v,d);let sd=si.fixed?si.fixedAmt:v*si.rate;const rr=getRegFee(v,d),rf=v*rr,cp=v*0.005,su=v*0.001,tot=sd+rf+cp+su;document.getElementById('results').style.display='block';document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});const dl={sale:'Sale Deed',gift_family:'Gift Deed (Family)',gift_other:'Gift Deed',partition:'Partition Deed',mortgage:'Mortgage Deed',lease:'Lease Deed',exchange:'Exchange Deed',settlement:'Settlement Deed'},ll={bbmp:'BBMP – Bengaluru',bda:'BDA / City Municipal',town:'Town Panchayat',gram:'Gram Panchayat'};document.getElementById('propertySummary').innerHTML=`<div class="summary-pill">${fmt(v)}</div><div class="summary-pill">${dl[d]}</div><div class="summary-pill">${ll[loc]}</div>`;const rows=[{label:'Property Value',value:fmt(v),pct:''},{label:`Stamp Duty (${si.label})`,value:fmt(sd),pct:si.fixed?'Fixed':`${(si.rate*100).toFixed(0)}% of value`},{label:`Registration Fee (${(rr*100).toFixed(0)}%)`,value:fmt(rf),pct:`${(rr*100).toFixed(0)}% of value`},{label:'CESS (0.5%)',value:fmt(cp),pct:'0.5% of value'},{label:'Surcharge (0.1%)',value:fmt(su),pct:'0.1% of value'}];let rh='';rows.forEach((r,i)=>{rh+=`<div class="result-row" style="animation-delay:${0.05+i*0.05}s"><div class="result-label"><span class="dot"></span>${r.label}</div><div class="result-value">${r.value}<span class="result-pct">${r.pct}</span></div></div>`;});document.getElementById('resultRows').innerHTML=rh;document.getElementById('totalValue').textContent=fmt(tot);document.getElementById('noteBox').innerHTML=`<strong>Note:</strong> Total effective rate: ${((tot/v)*100).toFixed(2)}% of property value. Stamp duty is calculated on the higher of declared price or guidance value. Registration fee revised to 2% from <strong>31 Aug 2025</strong>. Verify circle rates on <strong>Kaveri 2.0 portal</strong> before finalising.`;}
+    function reset(){document.getElementById('results').style.display='none';document.getElementById('propValue').value='';document.getElementById('propValue').focus();}
+    document.addEventListener('keydown',e=>{if(e.key==='Enter')calculate();});
+    function updateProgress(){const cb=document.querySelectorAll('#checklist input[type="checkbox"]');let c=0;cb.forEach(b=>{if(b.checked)c++;});const p=Math.round((c/cb.length)*100);document.getElementById('progress-bar').style.width=p+'%';document.getElementById('progress-text').innerText=p+'% Completed';}
   </script>
-    <!-- WHAT IS BHOOMI -->
-  <h1 class="text-center mb-2" id="what-is-bhoomi">Bhoomi Karnataka &mdash; Official Land Records Portal</h1>
-  <p class="text-center text-muted mb-4" style="font-size:.95rem;max-width:700px;margin-left:auto;margin-right:auto">Launched in 2000, Bhoomi was India's first state-wide land records digitization project &mdash; transforming 20 million paper records into a searchable public database.</p>
- 
+
+  <!-- ════════════════════════════════════════════════════════════
+       MAIN EXPERT GUIDE
+  ════════════════════════════════════════════════════════════ -->
+  <div class="guide-wrap mt-5">
+
+    <h1 style="text-align:left;border-left:6px solid #cc7a00;padding-left:16px;font-size:1.95rem;line-height:1.35;">Bhoomi Karnataka: The Expert's Complete Guide to Land Records, RTC Pahani, Mutation, and Everything the Portal Won't Tell You</h1>
+    <p class="article-meta">By Masroor Ahmad &nbsp;|&nbsp; Land Records Research &nbsp;|&nbsp; Last verified April 2026</p>
+
+    <div class="toc-box">
+      <h4>In This Guide</h4>
+      <ol>
+        <li><a href="#three-layers">What Bhoomi Really Is: The Three-Layer Reality</a></li>
+        <li><a href="#rtc-forensic">The RTC Column-by-Column Forensic Guide</a></li>
+        <li><a href="#irtc">i-RTC vs Regular RTC: The Technical and Legal Truth</a></li>
+        <li><a href="#mutation">Mutation: The Complete Insider Process with Hidden Failure Points</a></li>
+        <li><a href="#ec">Reading an Encumbrance Certificate Like a Property Lawyer</a></li>
+        <li><a href="#kharab">Kharab Land: The Hidden Deduction That Blindsides Buyers</a></li>
+        <li><a href="#podi">Joint Ownership, Pyki, and Why Podi Is Urgent</a></li>
+        <li><a href="#fraud">Land Fraud Patterns in Karnataka and How to Defend Against Them</a></li>
+        <li><a href="#conversion">DC Conversion: The Critical Gap Between the Order and E-Swathu</a></li>
+        <li><a href="#no-record">Diagnosing "No Record Found": 8 Specific Causes and Exact Fixes</a></li>
+        <li><a href="#stamp">Stamp Duty in Full: Slab Calculations with Worked Examples</a></li>
+        <li><a href="#nri">NRI Ownership: The POA Adjudication Requirement Most Get Wrong</a></li>
+      </ol>
+    </div>
+
+    <!-- ── 1. THREE LAYERS ────────────────────────────────────── -->
+    <hr class="section-divider" id="three-layers">
+    <h2>What Bhoomi Really Is: The Three-Layer Reality Behind the Portal</h2>
+
+    <p>In the year 2000, Karnataka became the first state in India to fully digitize its agricultural land records — a project called <strong>Bhoomi</strong>, named after the Kannada word for earth. The scale of what was achieved is genuinely impressive: millions of handwritten Pahani registers, maintained by Village Accountants in paper ledgers across 30 districts, were converted into a searchable digital system that any citizen with an internet connection could access. For a farmer who previously needed to make three visits to the Taluk Office and negotiate with a Village Accountant to get a copy of their own record, this was transformative.</p>
+
+    <p>But most people who use the Bhoomi portal — and most who are frustrated by it — do not understand what it actually is. They treat it as a single thing: a website that either shows you a record or doesn't. In reality, Bhoomi is three distinct layers that interact with each other, and every problem, every error, every "No Record Found" message, and every stuck mutation can be traced to a failure at one specific layer. Knowing which layer is the problem is the difference between solving it in 5 minutes and being confused for months.</p>
+
+    <p><strong>Layer 1: The Portal</strong> — the public-facing website at landrecords.karnataka.gov.in. This is what you see. It renders data from the database, accepts payments, generates i-RTCs, and shows mutation status. The portal is a display layer only. It cannot fix errors; it can only reflect what is in Layer 2.</p>
+
+    <p><strong>Layer 2: The Database</strong> — the back-end records management system populated initially by data entry operators who transcribed millions of handwritten records between 1999 and 2005. This is where the actual land record lives. Errors in Layer 2 require official action to correct — not portal refreshes. The quality of Layer 2 data varies enormously by district and taluk, depending on how carefully the initial digitization was conducted.</p>
+
+    <p><strong>Layer 3: The Human Bureaucracy</strong> — the Village Accountant, Revenue Inspector, Shirastedar, Tahsildar, Assistant Commissioner, and their supporting staff. These officials are the only people who can authorize changes to the Layer 2 database. The portal shows you the outcomes of their decisions. When a mutation is "Pending," it means a human at some level in Layer 3 has not yet acted. No amount of portal interaction changes this.</p>
+
+    <p>This framework explains something that baffles many Bhoomi users: why a problem that should be simple to fix (a name spelled wrong, a survey number that doesn't appear) can take months to resolve. The portal cannot fix a database error. The database cannot update itself. Only a revenue official can authorize a correction — and that official has a queue, an inspection schedule, an approval hierarchy, and their own constraints. The portal is the window. The bureaucracy is the engine. Understanding this stops you from wasting time doing the wrong things.</p>
+
+    <div class="blog-image">
+      <img src="pahani.webp" srcset="pahani.webp 400w, pahani.webp 800w, pahani.webp 1200w" sizes="(max-width:600px) 388px, 600px" alt="Sample of Bhoomi Pahani Document" width="388" height="220">
+    </div>
+
+    <!-- ── 2. RTC FORENSIC ─────────────────────────────────────── -->
+    <hr class="section-divider" id="rtc-forensic">
+    <h2>The RTC Column-by-Column Forensic Guide</h2>
+
+    <p>Most citizens who download an RTC (Pahani) look at two things: the owner's name and the total area. They confirm their name is there and the area looks roughly right, and they consider the document checked. This approach is how people end up buying land with undisclosed tenant rights, purchasing plots with 20-year-old court stays nobody mentioned, or paying for 2 acres when they can only legally use 1 acre 25 guntas. The legal health of a piece of Karnataka land is not in the headline fields — it is in the columns most people never read.</p>
+
+    <table class="col-table">
+      <thead><tr><th>Column</th><th>What It Records</th><th>What to Look For</th><th>Risk Level</th></tr></thead>
+      <tbody>
+        <tr><td class="col-num">Col. 1</td><td>Khata (Account) Number</td><td>Whether the Khata is individual or shared with multiple owners</td><td class="risk-med">MEDIUM — joint Khata complicates loans and future sale</td></tr>
+        <tr><td class="col-num">Col. 2</td><td>Survey No. / Surnoc / Hissa</td><td>Sub-division format; whether it matches your sale deed exactly</td><td class="risk-low">LOW if consistent across documents</td></tr>
+        <tr><td class="col-num">Col. 3</td><td>Nature of Possession &amp; Tenancy</td><td>Any name other than the owner; words like Genide, Hakkudari, or Gavudagarike</td><td class="risk-high">🔴 VERY HIGH — can permanently block sale or conversion</td></tr>
+        <tr><td class="col-num">Col. 9</td><td>Owner Name and Extent</td><td>"Pyki" entries indicating undivided joint share</td><td class="risk-high">🔴 HIGH — no demarcated boundary; loans often refused</td></tr>
+        <tr><td class="col-num">Col. 10</td><td>Total Extent with Kharab breakdown</td><td>A-Kharab and B-Kharab portions within the gross area</td><td class="risk-high">🔴 HIGH — B-Kharab belongs to government and reduces usable area</td></tr>
+        <tr><td class="col-num">Col. 11</td><td>Liabilities: Loans and Court Orders</td><td>Bank hypothecations; court stay orders; government acquisition notices</td><td class="risk-high">🔴 CRITICAL — any unresolved entry blocks sale and mortgage</td></tr>
+        <tr><td class="col-num">Col. 12</td><td>Crop Details</td><td>Whether declared land type (wet/dry/garden) matches actual use</td><td class="risk-med">MEDIUM — affects crop insurance and scheme eligibility</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Column 3: The Most Dangerous Column in Any Karnataka RTC</h3>
+    <p>Column 3 records who is cultivating the land and under what legal basis. The simplest and cleanest entry is <em>Swantha</em> — meaning the registered owner is cultivating their own land. When you see anything other than this, you need to stop and investigate before proceeding with any transaction.</p>
+
+    <p>The most serious entry to find in Column 3 is <strong>Genide (ಗೇಣಿದೆ)</strong> — an old tenancy record. Under the Karnataka Land Reforms Act of 1961, any tenant who cultivated land for a minimum qualifying period could acquire protected tenancy rights. These rights, once established, are not extinguished by the sale of the land — they travel with the land to the new owner. If such a tenant brought their case before the Land Tribunal and was granted permanent occupancy rights to a portion of the survey number, then regardless of how many times the land has changed hands since, the tenant (or their legal heirs) retains a claim to that portion.</p>
+
+    <div class="danger-box">
+      <strong>Non-Negotiable Rule:</strong> If Column 3 of any RTC shows a name other than the registered owner — or contains the words Genide, Hakkudari, Gavudagarike, or any reference to a lease or tenancy — do not proceed with the transaction until you have: (1) obtained a certified copy of any Land Tribunal orders for that survey number from the Taluk Office, (2) confirmed in writing from a property advocate that no tenant rights exist or have been adjudicated, and (3) verified that the seller can produce documentation showing any historical tenancy was formally terminated. A registered sale deed does not override a valid Land Tribunal occupancy order.
+    </div>
+
+    <p>The second danger in Column 3 is a <strong>Government Lessee entry</strong> — land leased from the government under a formal lease deed. Such land typically carries restrictions on private sale and requires formal conversion of the lease before ownership can transfer freely. The third is any <strong>blank or "Under Dispute" entry</strong>, which frequently indicates that a prior mutation was initiated but never completed — leaving the record in legal limbo that the current nominal owner may be entirely unaware of.</p>
+
+    <h3>Column 9: The Pyki Trap That Catches Every Inheriting Family</h3>
+    <p>Column 9 records the owner's name alongside the extent they own within the survey number. The critical word to watch for is <strong>Pyki (ಪಿಕಿ)</strong>. When this word appears next to an area measurement, it signals that the person owns that area as an undivided share within a larger joint survey number — but the specific physical location and boundaries of their share have never been formally demarcated on the ground.</p>
+
+    <div class="scenario-box">
+      <div class="sc-label">Illustrative Scenario — How Pyki Creates Decades of Problems</div>
+      <p>Survey Number 78 in a village near Tumkur has a gross area of 4 acres. The original owner dies intestate, leaving three adult children. The Revenue Department processes inheritance mutation and the RTC now shows three entries in Column 9, each reading "1 Acre 13 Guntas 20 Square Links — Pyki." Each child legally owns their one-third share. But which physical one-third?</p>
+      <p>The RTC does not specify. Twenty years pass. Each sibling informally settles into a section of the land — one grows ragi near the northern boundary, one plants arecanut in the southern portion, one builds a small storage shed in the middle. No formal survey is done. When the youngest sibling needs funds and approaches a bank for an agricultural loan, the bank's legal officer finds "Pyki" in Column 9 and refuses — the bank cannot take a mortgage over a share with no legally demarcated boundary. When the middle sibling wants to sell their portion to a third party, the buyer's advocate raises the same objection. To resolve this, all three siblings must now agree to a formal Podi (sub-division), cooperate with a government survey team, and sign a partition agreement — cooperation that 20 years of informal boundary assumptions have made emotionally difficult. The Pyki entry that seemed harmless in the mutation order has become the source of a family conflict and financial paralysis.</p>
+    </div>
+
+    <h3>Column 11: Liabilities That Outlive the Loan by Decades</h3>
+    <p>Banks register their agricultural loan hypothecations in Column 11 as a public notice that the land is pledged as collateral. When the loan is repaid, the bank issues a No Due Certificate. But here is what most borrowers do not know: the Column 11 entry is <em>not automatically removed when the loan is repaid</em>. The borrower must present the NDC to the Tahsildar and file a formal petition to strike off the entry. Because this step requires effort and involves another Taluk Office visit, a very large number of fully-repaid loans continue appearing as active liabilities in Column 11 — creating false encumbrances that complicate subsequent sales and refinancing.</p>
+
+    <p>More serious are <strong>court stay orders</strong> in Column 11. These arise from civil suits — boundary disputes, inheritance conflicts, fraud allegations — and are entered when a court passes an interim injunction. Unlike a loan entry, a court stay cannot be removed by any revenue official alone. You need a certified copy of the court order <em>vacating</em> the stay, which must be submitted to the Tahsildar with a formal petition to clear the column entry. If the underlying case is still active, the entry remains regardless of how many years pass — and in some Karnataka districts, you will find Column 11 entries from civil suits filed in the early 1990s that remain unresolved and unremarked, quietly making that land unsaleable to any buyer whose lawyer bothers to check.</p>
+
+    <!-- ── 3. i-RTC ─────────────────────────────────────────────── -->
+    <hr class="section-divider" id="irtc">
+    <h2>i-RTC vs Regular RTC: The Technical and Legal Truth</h2>
+
+    <div class="blog-image">
+      <img src="irtc.webp" srcset="irtc.webp 400w, irtc.webp 800w, irtc.webp 1200w" sizes="(max-width:600px) 388px, 600px" alt="Sample of Bhoomi iRTC Digital Document" width="388" height="220">
+    </div>
+
+    <p>A regular RTC download is a screen-rendered snapshot of the database record at the moment of access. It carries no digital signature, no verification number, and no authentication layer. Anyone with basic image editing skills can alter the owner name, area figures, or Column 11 entries on a printed copy without leaving any detectable trace. This is not a theoretical concern — forged regular RTC printouts have featured in multiple Karnataka land fraud prosecutions, most commonly in rural transactions involving buyers who did not know to ask for the authenticated version.</p>
+
+    <p>The i-RTC is generated through the government's Public Key Infrastructure (PKI) system. When you request one and pay the ₹15 fee, the system queries the live database, creates a PDF representation of that exact record at that moment, and applies a digital signature using the Revenue Department's certified digital certificate. The resulting document contains a QR code that resolves to the specific live database record and timestamp, a cryptographic signature embedded in the PDF metadata and verifiable through any PDF reader's signature validation panel, a unique document reference number for independent XML verification, and a precise timestamp establishing the currency of the data.</p>
+
+    <p>The QR code is the most practically important feature. Any official — a bank loan officer, a Sub-Registrar's clerk, a court document checker — can scan it with a phone and see the live record, making any discrepancy between the printed document and the database instantly detectable. This is why banks specifically require it for formal loan processing and why Sub-Registrar offices increasingly insist on it for registration verification.</p>
+
+    <div class="alert-box">
+      <strong>Currency Warning:</strong> Most banks impose an implicit 90-day currency requirement on i-RTCs. An i-RTC generated six months ago, while cryptographically valid, does not reflect whether a mutation was filed last week or a court order entered in Column 11 last month. For high-value transactions, always generate a fresh i-RTC within 30 days of the transaction date. The ₹15 cost is the cheapest due diligence you can do.
+    </div>
+
+    <div class="success-box">
+      <strong>The Rule:</strong> Regular RTC = reference only. i-RTC = every formal submission. No exceptions. For banks, courts, Sub-Registrar offices, and government schemes: always an i-RTC, always within 90 days.
+    </div>
+
+    <!-- ── 4. MUTATION ─────────────────────────────────────────── -->
+    <hr class="section-divider" id="mutation">
+    <h2>Mutation (Hakku Badlavalike): The Complete Insider Process</h2>
+
+    <div class="blog-image">
+      <img src="mutation.webp" srcset="mutation.webp 400w, mutation.webp 800w, mutation.webp 1200w" sizes="(max-width:600px) 388px, 600px" alt="Sample of Bhoomi Mutation Document" width="388" height="220">
+    </div>
+
+    <p>Mutation — Hakku Badlavalike in Kannada — is the administrative act of updating the government's revenue records to reflect a change in land ownership. It is entirely separate from registration at the Sub-Registrar's office. Registration at the Sub-Registrar establishes your legal title under the Transfer of Property Act. Mutation updates the revenue record under the Karnataka Land Revenue Act. Both are required. Neither substitutes for the other. Until mutation is complete, you own the land legally but the government's records still show the seller's name — creating a gap that accumulates problems with every passing month.</p>
+
+    <h3>The Kaveri-to-Bhoomi Pipeline: Why Mutations Sometimes Fail Before They Start</h3>
+    <p>When a sale deed is registered at the Sub-Registrar's office through the Kaveri portal, the system is designed to automatically push a data packet — called a <strong>J-Slip</strong> — to the Bhoomi system, initiating a mutation. This auto-initiation explains why you may see "Mutation Pending" in Bhoomi within days of registering without manually filing an application. However, this automatic pipeline fails when any data inconsistency exists between the two systems.</p>
+
+    <p>The most common J-Slip mismatch triggers: the seller's name in the Kaveri registration record is spelled differently from how it appears in the Bhoomi database — even a single character difference ("Ramamurthy" vs "Ramamoorthy") causes rejection; the survey number format differs between systems ("45/2A" in Bhoomi vs "45-2A" in Kaveri); or the Khata number referenced in the registration does not match the Bhoomi record. When a J-Slip is rejected, the mutation never auto-initiates — and the buyer has no notification. They simply wait, check mutation status, find nothing, and eventually discover weeks later that their application never existed.</p>
+
+    <div class="alert-box">
+      <strong>Action Required:</strong> If you registered your sale deed more than 30 days ago and cannot find your mutation application in the Mutation Status tracker, do not assume it is processing normally. Visit the Bhoomi center at your Taluk Office with your registration number. If the J-Slip failed, you will need to file a manual mutation application — straightforward, but not something the portal will tell you to do.
+    </div>
+
+    <h3>The Approval Hierarchy: What Actually Happens at Each Stage</h3>
+
+    <div class="step-flow">
+      <div class="step-item">
+        <div class="step-connector"><div class="step-circle">1</div><div class="step-line"></div></div>
+        <div class="step-content">
+          <strong>Village Accountant (VA) — Checklist Verification (Days 1–20)</strong>
+          <p>The VA verifies that the seller's name in the application matches Column 9 of the current RTC exactly, that the survey number exists and is not flagged as Bagair Hukum (unauthorized encroachment), that no prior pending mutation exists for the same survey number, and that the transaction type (sale, inheritance, gift) matches the registered document. A checklist rejection — "VA Objection" in the system — almost always means a name spelling mismatch between the Kaveri registration data and the Bhoomi record. This is resolved by filing a rectification request supported by both sets of documents.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-connector"><div class="step-circle">2</div><div class="step-line"></div></div>
+        <div class="step-content">
+          <strong>Revenue Inspector (RI) — Physical Field Inspection (Days 20–60)</strong>
+          <p>The RI is mandated to visit the property, confirm the new owner is in actual possession, verify that the physical boundaries are consistent with the survey number, and serve written notice to interested parties — including any names appearing in Column 3 (tenants), Column 11 (bank lenders or court orders), and adjacent landowners in shared survey numbers. This is the stage where mutations most commonly stall: a single RI covers many villages and dozens of pending inspection requests. If your status shows "Pending RI Inspection" for more than 30 days, a personal visit to the Nadakacheri window at your Taluk Office — not a phone call or portal check — is usually necessary to prompt action.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-connector"><div class="step-circle">3</div><div class="step-line"></div></div>
+        <div class="step-content">
+          <strong>30-Day Public Notice Period</strong>
+          <p>Once the RI inspection is complete and the notice is served, a 30-day objection window opens. The notice is posted at the Gram Panchayat office and, in some taluks, published in the official gazette. Any person with a legal interest — an uninformed co-heir, a mortgage holder, a boundary dispute neighbor — can file a formal objection with the Tahsildar. If no objection is received within 30 days, the process continues to the Shirastedar's review. If an objection is received, the mutation enters a dispute hearing phase: the Tahsildar schedules hearings, both parties present evidence, and the Tahsildar issues a reasoned order — which can itself be appealed to the Assistant Commissioner.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-connector"><div class="step-circle">4</div><div class="step-line"></div></div>
+        <div class="step-content">
+          <strong>Shirastedar — Encumbrance Cross-Check</strong>
+          <p>The Shirastedar verifies that no active court stay order exists on the survey number in the Revenue Court records or across known civil court databases accessible to the Revenue Department. This supervisory check ensures the Tahsildar's final approval is not subsequently invalidated by an existing court order that was not caught earlier in the process.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-connector"><div class="step-circle">5</div><div class="step-line"></div></div>
+        <div class="step-content">
+          <strong>Tahsildar — Final Approval and Digital Signature</strong>
+          <p>The Tahsildar reviews the complete file — VA checklist, RI inspection report, notice period outcome, Shirastedar clearance — and passes the Mutation Order. This order is digitally signed, entered into Bhoomi, and triggers the RTC update. A new Mutation Register (MR) entry is created documenting the change. The entire process, end-to-end without complications, typically takes 60 to 90 days. With one stage stalling — particularly the RI inspection — 120 to 180 days is common.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 5. EC ────────────────────────────────────────────────── -->
+    <hr class="section-divider" id="ec">
+    <h2>Reading an Encumbrance Certificate Like a Property Lawyer</h2>
+
+    <p>The Encumbrance Certificate is not a pass/fail document — it is a narrative of every registered event involving a property over the period you request. Most buyers scan it for the word "nil" and stop reading. Experienced property lawyers read every line of a Form 15 EC the way a forensic accountant reads a balance sheet: looking not just at what is there but at what should be there and is not, and whether the chronological sequence of events makes legal sense.</p>
+
+    <p>Every entry in a Form 15 EC contains five fields: the Presentation Number (the sequence in which the document was registered), the Document Date, the Nature of Document (sale, mortgage, gift, partition, release), the Parties (executant and claimant), and the Consideration or Amount. Reading these chronologically reconstructs the ownership history of the property. A properly structured EC should show a clean, logical chain — Owner A sells to B (sale deed), B mortgages to Bank X (mortgage deed), Bank X releases mortgage (release deed), B sells to C (sale deed). Any gap or illogical sequence in this chain demands investigation before you proceed.</p>
+
+    <h3>Three EC Red Flags That Most Buyers Miss</h3>
+    <p><strong>Red Flag 1 — A mortgage with no subsequent release deed.</strong> This means a loan was taken against the property and either remains outstanding, or was repaid but the release deed was never registered. The bank's lien technically persists in the absence of a registered release. Always demand the original loan closure letter from the lender directly, and verify with the bank branch — not just with the seller — before proceeding.</p>
+    <p><strong>Red Flag 2 — A Power of Attorney entry immediately followed by a sale.</strong> When someone sells land using a POA, the EC shows the POA registration and the subsequent sale as separate entries. This pattern is a common vehicle for fraud — particularly when the POA was issued to a non-family member or when the POA was registered in a different district from the land. Always verify that the POA grantor was alive and willing at the time the POA was used for the sale.</p>
+    <p><strong>Red Flag 3 — A transaction chain with a missing link.</strong> If the EC shows Owner A then Owner C with no entry for how C acquired from someone between A and C, it means either a transaction was never registered (which is not legally binding for immovable property above Rs. 100 value, making the title potentially questionable) or your EC period was not long enough to capture the earlier transaction. Always request an EC that goes back at least 5 years before the earliest documented ownership the seller can show.</p>
+
+    <!-- ── 6. KHARAB ────────────────────────────────────────────── -->
+    <hr class="section-divider" id="kharab">
+    <h2>Kharab Land: The Hidden Deduction That Blindsides Buyers</h2>
+
+    <p>Karnataka's revenue system classifies land within a survey number into productive and non-productive categories. The productive portion is called <em>Jirayati</em>. The non-productive portions are collectively called Kharab — but this word covers two legally distinct categories with completely different ownership implications that most buyers conflate or ignore entirely.</p>
+
+    <p><strong>Class A Kharab</strong> is land within your survey boundary that is geographically incapable of cultivation — rocky outcrops, slopes too steep for farming, permanently waterlogged depressions. This land belongs to the owner of the survey number. It contributes to your gross RTC area but provides no agricultural value. For development purposes, A-Kharab can sometimes be converted to non-agricultural use more straightforwardly than cultivable land because it has no ongoing agricultural productivity to preserve.</p>
+
+    <p><strong>Class B Kharab</strong> is an entirely different matter. This is land within your survey boundary that is earmarked for public use — village footpaths, traditional cart tracks, canal margins, cremation or burial grounds, cattle watering points, drainage channels. The Karnataka Land Revenue Act vests this land in the government, regardless of what the survey boundaries suggest. You cannot wall it off. You cannot include it in development plans. You cannot sell or mortgage it. And you cannot claim compensation if the government uses it, because the government already owns it — the survey boundary is a historical artefact that happens to encompass it.</p>
+
+    <div class="worked-example">
+      <div class="ex-title">Worked Example: Kharab Impact on Real Transaction Value</div>
+      <p><strong>Situation:</strong> Survey No. 67/3 near a Tumkur village. RTC and sale deed both state total area: 2 Acres 35 Guntas. Guidance value: ₹8 lakh per acre. Seller asking: ₹22 lakhs.</p>
+      <p><strong>Column 10 breakdown you check before signing:</strong></p>
+      <p>Jirayati: 1 Acre 28 Guntas &nbsp;|&nbsp; A-Kharab: 4 Guntas &nbsp;|&nbsp; B-Kharab: 3 Guntas</p>
+      <p><strong>Your usable area:</strong> 1 Acre 32 Guntas (Jirayati + A-Kharab you own)</p>
+      <p><strong>Land you cannot use, build on, or sell:</strong> 3 Guntas B-Kharab — government property inside your boundary</p>
+      <p><strong>Fair value at guidance rate:</strong> approximately ₹14.3 lakhs for usable area</p>
+      <p><strong>Seller's ask:</strong> ₹22 lakhs — calculated on gross 2 acres 35 guntas including B-Kharab you will never own</p>
+      <p style="color:#c0392b;margin-top:4px;"><strong>Potential overpayment if you don't check Column 10: approximately ₹7.7 lakhs</strong></p>
+    </div>
+
+    <!-- ── 7. PODI ──────────────────────────────────────────────── -->
+    <hr class="section-divider" id="podi">
+    <h2>Joint Ownership, Pyki, and Why Podi Is Urgent</h2>
+
+    <p>A very large proportion of rural land litigation in Karnataka originates not from fraud, but from a structural problem families inherit without understanding: joint ownership of a single survey number where each person's specific share has never been formally demarcated. The word "Pyki" in Column 9 represents this situation — and treating it as a final resting state, rather than a starting point to be resolved, is one of the most financially damaging decisions rural landowners make.</p>
+
+    <p>When a landowner dies and leaves a 4-acre survey number to three children, the inheritance mutation results in each child receiving an entry in Column 9 showing approximately 1 acre 13 guntas with the word "Pyki." This is legally accurate — each person owns their share. But it is not operationally functional: banks refuse loans on Pyki RTCs because they cannot take a mortgage over a share with no demarcated boundary; buyers refuse Pyki plots because their advocates raise the same objection; and the informal boundary arrangements that families make over time — this row of mango trees is mine, that access track is yours — have no legal standing when a formal dispute arises.</p>
+
+    <p>The solution is <strong>Podi (ಪೋಡಿ)</strong> — the formal sub-division of a joint survey number into separate individually-owned sub-numbers. Government surveyors physically measure and demarcate each portion, and assign new survey sub-numbers (e.g., Survey 45 becomes 45/1, 45/2, 45/3). The original survey number is closed in Bhoomi and three clean individual RTCs are created — each independently mortgageable, independently saleable, and independently inheritable without reference to any co-owner.</p>
+
+    <p>The <strong>Tatkal Podi scheme</strong> offers a fast-track paid option that typically completes within 30 to 60 days from the survey appointment date, compared to 12 to 24 months for regular Podi applications in most taluks. The fee for Tatkal Podi varies by district and number of sub-divisions — approximately ₹5,000 to ₹15,000 as of 2026. Regular Podi carries no fee but depends entirely on the Survey Department's scheduling queue, which in many districts is significantly backlogged.</p>
+
+    <!-- ── 8. FRAUD ─────────────────────────────────────────────── -->
+    <hr class="section-divider" id="fraud">
+    <h2>Land Fraud Patterns in Karnataka and How to Defend Against Them</h2>
+
+    <p>Digitization eliminated most of the old manual fraud methods — false additions to handwritten registers, page substitutions, backdated entries. But it created a new attack surface: the mutation window. The 60 to 120 days between registration and completed mutation is precisely the period when a landowner's vigilance is at its lowest — they have registered, they believe the process is underway, and they are not checking the portal regularly. Sophisticated fraudsters know this window, and they exploit it.</p>
+
+    <div class="fraud-pattern">
+      <div class="fp-name">Pattern 1: The Parallel Mutation Attack</div>
+      <p>A fraudster, having obtained your survey number and seller's name from a publicly viewable regular RTC download, files a fraudulent mutation application using a forged sale deed — claiming to have purchased the land from the current RTC owner. Using a forged Aadhaar and falsified signatures, they attempt to advance the application through the VA checklist stage. If the Village Accountant's review is cursory, this can succeed far enough to reach the RI inspection stage before the legitimate owner discovers it. The first sign is typically a mutation application you did not file appearing under your survey number's Mutation Status search. <strong>Defence:</strong> Check the Mutation Status tab for your survey number every month without exception — not only when you have initiated something. A pending application you did not create is an emergency requiring immediate written objection to the Tahsildar.</p>
+    </div>
+    <div class="fraud-pattern">
+      <div class="fp-name">Pattern 2: The Altered Regular RTC Scam</div>
+      <p>A fraudster downloads a regular RTC for a property they do not own, edits the owner name to their own name using widely available image editing tools, and presents this altered printout as proof of ownership to a buyer. Since regular RTCs carry no digital signature, the alteration is undetectable to anyone who does not know to ask for the authenticated i-RTC. This pattern thrives in distress sale situations — where time pressure prevents proper due diligence — and in transactions involving buyers unfamiliar with the document authentication system. <strong>Defence:</strong> Never accept a regular RTC printout as evidence of ownership under any circumstances. Always demand an i-RTC and scan the QR code yourself before accepting the document.</p>
+    </div>
+    <div class="fraud-pattern">
+      <div class="fp-name">Pattern 3: The Inherited Property Impersonation</div>
+      <p>When a landowner dies and mutation to heirs has not been completed for several years, the RTC still shows the deceased person's name. A fraudster claiming to be a distant relative or the only heir approaches a buyer with forged succession documents and a fabricated will. Since the deceased cannot contradict the claim and legitimate heirs may be geographically dispersed or unaware, this fraud can progress to the point of a registered sale deed before discovery. <strong>Defence:</strong> When buying any land where the seller claims ownership through inheritance: obtain the original death certificate, the mutation-by-inheritance records from the Taluk Office, the Vamshavruksha (family tree) certificate issued by a competent authority, and speak directly with named family members if any appear in the documents.</p>
+    </div>
+
+    <!-- ── 9. CONVERSION ────────────────────────────────────────── -->
+    <hr class="section-divider" id="conversion">
+    <h2>DC Conversion: The Critical Gap Between the Order and E-Swathu</h2>
+
+    <p>One of the most consequential and least understood transitions in Karnataka's land administration is what happens after the Deputy Commissioner issues a land conversion order. The DC Conversion Order legally changes the permitted use of agricultural land to non-agricultural (residential, commercial, or industrial). But what most applicants do not understand is that this order is only the beginning of the administrative transition — it does not automatically update any record system, and failing to complete the subsequent steps leaves the property in an administrative limbo that can last for years.</p>
+
+    <p>After a DC Conversion Order is issued, the land must administratively migrate from Bhoomi (which manages agricultural land under the Revenue Department) to either <strong>E-Swathu</strong> (for land within gram panchayat limits, managed by the Rural Development and Panchayat Raj Department) or <strong>E-Aasthi / UPOR</strong> (for land within Urban Local Body limits). This migration requires the landowner to proactively apply to the relevant Panchayat or Municipality with the DC Conversion Order, the registered sale deed, the Bhoomi RTC, and the prescribed fee — and to have a Form 9/11 (Khata) created in their name in the new system.</p>
+
+    <p>Until the Khata is created, the property occupies three contradictory administrative states simultaneously: it appears as agricultural in Bhoomi (which has not been formally told to close the record), it is legally non-agricultural (because the DC Order exists), and it has no municipal or panchayat Khata (because the relevant local body has not been applied to). This contradiction makes building plan approval impossible (BDA/BBMP/Panchayat requires a Khata), creates property tax billing confusion between Revenue and local body departments, and causes serious complications at the next sale — the buyer's due diligence will immediately flag the inconsistency.</p>
+
+    <!-- ── 10. NO RECORD ────────────────────────────────────────── -->
+    <hr class="section-divider" id="no-record">
+    <h2>Diagnosing "No Record Found": 8 Specific Causes and Exact Fixes</h2>
+
+    <div class="blog-image">
+      <img src="viewpahani.webp" srcset="viewpahani.webp 400w, viewpahani.webp 800w, viewpahani.webp 1200w" sizes="(max-width:600px) 388px, 600px" alt="Bhoomi View Pahani Search" width="388" height="220">
+    </div>
+
+    <p>The message "No Record Found" on the Bhoomi portal is the beginning of a diagnostic process, not a conclusion. The record almost certainly exists — the question is why the system cannot retrieve it through your specific search parameters. Work through these eight causes in order before concluding that the record has a database problem.</p>
+
+    <h3>Cause 1: Survey Number Format Entered Incorrectly</h3>
+    <p>Karnataka survey numbers follow the format: Main Number / Surnoc / Hissa. For example, Survey 45, Surnoc 2, Hissa A appears as "45/2A." The Bhoomi portal has separate input fields for each component. Entering "45/2A" in the main survey number field instead of distributing the components across the correct fields is the single most common cause of "No Record Found" for records that exist perfectly correctly in the database. <strong>Fix:</strong> Use your original sale deed to identify the exact survey number, Surnoc, and Hissa components, then enter each in the correct field. If unsure about the field mapping, the Bhoomi center at your Taluk Office can demonstrate in minutes.</p>
+
+    <h3>Cause 2: Hobli Not Selected from Dropdown</h3>
+    <p>The Bhoomi database stores hobli names as they were entered during initial digitization, which may differ from contemporary administrative spellings or common local usage. If you type a hobli name manually rather than selecting it from the portal's dropdown, even a single character difference causes a mismatch. <strong>Fix:</strong> Always use the dropdown. Never type a hobli name manually on any Bhoomi portal form.</p>
+
+    <h3>Cause 3: Data Migration Error from Original Digitization</h3>
+    <p>During the 1999–2005 digitization drive, operators transcribed millions of handwritten records. Errors occurred — a "5" misread as "S," a hyphenated sub-number entered as a space, an entire Hissa entry accidentally skipped. These errors were frozen into the database. <strong>Fix:</strong> File a correction application at the Bhoomi Monitoring Cell in your Taluk with your original or photocopied handwritten Pahani, your sale deed, and property tax receipts. The Revenue Inspector will physically verify and correct the record — typically within 30 to 90 days.</p>
+
+    <h3>Cause 4: Survey Number Changed After Re-Survey</h3>
+    <p>Several taluks — particularly in rapidly urbanizing areas around Bengaluru, Mysuru, and Hubli-Dharwad — have undergone full re-survey operations assigning entirely new survey numbers to existing parcels. Old numbers may be formally closed in the database while new numbers have not been communicated to the landowner. <strong>Fix:</strong> Request the Re-Survey Concordance Table from the Taluk Office or the SSLR (Survey, Settlement and Land Records) office. This maps old survey numbers to new ones and is not available online.</p>
+
+    <h3>Cause 5: Village Name Transliteration Difference</h3>
+    <p>Karnataka has over 27,000 villages and hamlets. The romanization of Kannada village names is not standardized — "Doddaballapura" and "Doddaballapur" are the same village but different strings, and the database stores whichever the digitization operator entered. <strong>Fix:</strong> Select your taluk and hobli from the dropdowns, then browse the village list that appears. Identify your village visually — do not type the name.</p>
+
+    <h3>Cause 6: Record Flagged as Bagair Hukum</h3>
+    <p><em>Bagair Hukum</em> (without authority) is the Revenue Department's classification for land under unauthorized possession or encroachment dispute. Records flagged this way are sometimes withheld from the public portal pending resolution. <strong>Fix:</strong> Check the Bagair Hukum service at rdservices.karnataka.gov.in. If your survey number appears there, you must appear before the Revenue Authority to resolve the status before the record becomes publicly accessible.</p>
+
+    <h3>Cause 7: Record in Bifurcation Transition</h3>
+    <p>When an approved bifurcation is being processed, the original survey number is closed in the database while new sub-numbers are being created. During this transition — which can last several weeks — neither the old number nor the new ones may be publicly retrievable. <strong>Fix:</strong> Check with the Taluk Office's Bhoomi center. They have backend visibility into records in transition that the public portal does not provide.</p>
+
+    <h3>Cause 8: Portal Technical Failure</h3>
+    <p>Bhoomi serves millions of concurrent requests and experiences genuine service disruptions — particularly on the first and last days of each month, during software updates, and during the 10 PM to 12 AM scheduled maintenance window. <strong>Fix:</strong> Access the portal between 6 AM and 9 AM for the most reliable experience. If a record that previously appeared is now showing "No Record Found," wait 24 to 48 hours before assuming a data problem. If the issue persists, contact the helpdesk on 080-22113255.</p>
+
+    <!-- ── 11. STAMP DUTY ──────────────────────────────────────── -->
+    <hr class="section-divider" id="stamp">
+    <h2>Stamp Duty in Full: Slab Calculations with Worked Examples</h2>
+
+    <p>Stamp duty in Karnataka is not a single percentage — it is three distinct components applied simultaneously, each calculated on a different basis. Understanding each separately, and how they interact, is the difference between accurate budgeting and a financial surprise at the Sub-Registrar's office that you have no way to absorb at that moment.</p>
+
+    <p>The most important concept first: all three components are calculated not on the price you agreed to pay, but on the <strong>higher of the declared transaction value or the government's guidance value (circle rate)</strong> for that specific location and property type. Guidance values are published by the Revenue Department and searchable on the Kaveri 2.0 portal at the village and street level. If you agree to buy a plot for ₹40 lakhs but the government's guidance value for that location is ₹55 lakhs, every component of your stamp duty — basic duty, cess, surcharge, and registration fee — is calculated on ₹55 lakhs. Sellers who propose declaring a lower value to save on stamp duty are asking you to commit a legal offence with consequences that can include document voidance and prosecution.</p>
+
+    <div class="worked-example">
+      <div class="ex-title">Worked Example A — Property Valued Above ₹45 Lakhs</div>
+      <p><strong>Declared value:</strong> ₹80,00,000 &nbsp;|&nbsp; <strong>Guidance value:</strong> ₹72,00,000 &nbsp;|&nbsp; <strong>Calculation basis:</strong> ₹80,00,000</p>
+      <p>Basic Stamp Duty at 5%: ₹4,00,000</p>
+      <p>Cess at 0.5%: ₹40,000</p>
+      <p>Surcharge at 0.1%: ₹8,000</p>
+      <p>Registration Fee at 2% (effective 31 Aug 2025): ₹1,60,000</p>
+      <p><strong>Total Payable: ₹6,08,000 &nbsp;|&nbsp; Effective rate: 7.6%</strong></p>
+    </div>
+
+    <div class="worked-example">
+      <div class="ex-title">Worked Example B — Property Valued Below ₹20 Lakhs</div>
+      <p><strong>Declared value:</strong> ₹15,00,000 &nbsp;|&nbsp; <strong>Guidance value:</strong> ₹13,00,000 &nbsp;|&nbsp; <strong>Calculation basis:</strong> ₹15,00,000</p>
+      <p>Basic Stamp Duty at 2%: ₹30,000</p>
+      <p>Cess at 0.5%: ₹7,500</p>
+      <p>Surcharge at 0.1%: ₹1,500</p>
+      <p>Registration Fee at 2%: ₹30,000</p>
+      <p><strong>Total Payable: ₹69,000 &nbsp;|&nbsp; Effective rate: 4.6%</strong></p>
+    </div>
+
+    <h3>Gift Deeds, Settlement Deeds, and Partition Deeds</h3>
+    <p>Gift deeds between specified close family members — spouse, children, grandchildren, parents, siblings — attract a fixed stamp duty rather than a percentage. As of 2026, this fixed duty ranges from ₹1,000 to ₹5,000 depending on the specific relationship and property nature. This is a substantial concession: a ₹80 lakh property gifted to a child attracts perhaps ₹5,000 in stamp duty rather than ₹4 lakhs. However, a gift deed between cousins — who are not in the specified list — is treated identically to a sale deed. Partition deeds attract 1% stamp duty on the market value of the share being separated, with a registration fee of 1% (not 2%). Settlement deeds within the family attract ₹1,000 to ₹2,000 fixed duty for specific property categories. These rates are defined in Schedule I of the Karnataka Stamp Act and revised periodically through state budget amendments — always verify current rates at the time of your transaction.</p>
+
+    <!-- ── 12. NRI ──────────────────────────────────────────────── -->
+    <hr class="section-divider" id="nri">
+    <h2>NRI Ownership: The POA Adjudication Requirement Most Get Wrong</h2>
+
+    <p>For Karnataka landowners living outside the state or abroad, the Power of Attorney is the primary instrument for managing property affairs without personal attendance. But the single most common and costly mistake NRI landowners make is assuming that a POA notarized at an Indian consulate abroad is immediately valid for Karnataka property transactions. It is not, and discovering this at the Sub-Registrar's office on the day of a transaction — after the buyer has arrived, after the seller has given notice, after legal fees have been paid — is both stressful and expensive.</p>
+
+    <p>A POA executed abroad, even if properly notarized by an Indian consulate, must undergo <strong>adjudication</strong> before use in Karnataka property transactions. Adjudication is the formal assessment and stamping of a foreign-executed document by the District Registrar's office (not the Sub-Registrar — the District Registrar, a senior officer) in Karnataka. The process involves assessment of the appropriate stamp duty on the POA itself based on the powers granted, payment of that duty, and endorsement of the adjudication on the original document. Only after this endorsement is the POA accepted for Sub-Registrar registration of a sale deed, gift deed, or any property transaction, or for Tahsildar-level mutation applications.</p>
+
+    <p>Documents required for adjudication: the original foreign-executed POA (photocopies are not accepted), a certified English translation if the document is in another language, the principal's passport copy for identity verification, and payment of the adjudication stamp duty. The document is submitted to the District Registrar's office, processed over several working days depending on the current load, and returned with the endorsement affixed. The adjudicated POA can then be used exactly as a locally-executed POA in all property transactions.</p>
+
+    <div class="alert-box">
+      <strong>Practical Warning for NRI Owners:</strong> A POA, even if adjudicated, has a practical validity concern beyond its face term. For high-value transactions, the Sub-Registrar or Tahsildar may request confirmation that the grantor is still alive and the POA reflects their current intention — particularly if the grantor is elderly or the POA is more than 2 years old. A Life Certificate attested by a Gazetted Officer or Indian consulate, or a video-recorded statement by the grantor confirming the POA, provides strong supporting evidence. If the grantor has died since executing the POA, the POA is automatically void — any transaction using it after that point is legally invalid and can be set aside by a court regardless of what the Sub-Registrar registered.
+    </div>
+
+  </div><!-- /guide-wrap -->
+
+  <!-- ══════════════════════════════════════════════════════════
+       INFORMATION CARDS
+  ══════════════════════════════════════════════════════════ -->
+  <h2 class="mb-4 mt-5">What You Need to Know Before Buying or Renting</h2>
   <div class="row g-4 mb-5">
-    <div class="col-lg-8">
-      <div class="content-card">
-        <h2>What Is Bhoomi and What Does an RTC Contain?</h2>
-        <p>The <strong>Revenue Department of Karnataka</strong> manages Bhoomi, and its core document &mdash; the <strong>RTC (Record of Rights, Tenancy and Crops)</strong>, called <strong>Pahani (&#3239;&#3253;&#3240;&#3267;)</strong> in Kannada &mdash; is far more than a simple ownership certificate. It is the land's complete legal identity document. Understanding what each column records is essential before buying, selling, or applying for a loan against any agricultural land in Karnataka.</p>
-        <h3>The Critical Columns in an RTC &mdash; What Each One Means</h3>
-        <div class="callout"><strong>Most buyers only check Column 9 (owner name).</strong> The hidden legal problems are in Column 3 and Column 11. Ignoring these is one of the most common and costly mistakes Karnataka property buyers make.</div>
-        <ul>
-          <li><strong>Column 3 &mdash; Nature of Possession &amp; Tenancy:</strong> The most litigious column. If you see names other than the owner here, or the word "Genide" (tenancy), it implies a protected tenant with rights under the Karnataka Land Reforms Act. Even with a clear Title Deed, a legacy tenant entry never formally cleared by the Land Tribunal can prevent you from converting or reselling the land.</li>
-          <li><strong>Column 9 &mdash; Owner Name &amp; the "Pyki" Complication:</strong> In ancestral properties you may see "Pyki" next to an extent of land, indicating a share within a larger undivided survey number. Without a sub-division sketch (Tatkal Podi) fixing boundaries, "Pyki" owners are vulnerable to boundary encroachments.</li>
-          <li><strong>Column 10 &mdash; Extent of Land:</strong> Total area in Acres and Guntas, broken down by soil class and irrigation source. This is the official legal area &mdash; not what you measure with tape on the ground.</li>
-          <li><strong>Column 11 &mdash; Liabilities:</strong> Banks mark their mortgage liens (hypothecation) here. Also look for "Court Stay" or "Injunction" notes. A decades-old stay may still appear even after the case was resolved &mdash; you must file a request with a certified court judgment copy to the Tahsildar to remove it.</li>
-          <li><strong>Column 12 &mdash; Crops Grown:</strong> Seasonal crop details used for crop insurance, Kisan Credit Cards, and agricultural loan eligibility. An incorrect crop entry can affect your insurance claim payout.</li>
-        </ul>
-        <h3>Understanding B-Kharab and Phut Kharab Land</h3>
-        <p>A frequent source of anxiety is discovering that physical land measurement does not match the RTC extent. This is often because of <strong>Kharab</strong> land within the survey number:</p>
-        <ul>
-          <li><strong>Class A Kharab:</strong> Land unfit for agriculture (rocky terrain, waterlogging). This land belongs to you and can be converted for non-agricultural use with DC Conversion.</li>
-          <li><strong>Class B Kharab:</strong> Land reserved for public use &mdash; footpaths, cart tracks, canals, burial grounds. This land belongs to the government even if it falls inside your survey boundaries. You cannot build on it, wall it off, or use it privately.</li>
-        </ul>
-        <div class="callout callout-danger"><strong>Practical rule:</strong> Always subtract B-Kharab from the total RTC extent to calculate the true usable area before negotiating price per square foot. An RTC showing 2 Acres with 0.15 acres of B-Kharab means only 1.85 acres are actually usable.</div>
-      </div>
-    </div>
-    <div class="col-lg-4">
-      <div class="content-card mb-4">
-        <h3 style="margin-top:0">Bhoomi Portal &mdash; Key Facts</h3>
-        <table class="data-table">
-          <tbody>
-            <tr><th style="width:45%">Portal</th><td><a href="https://landrecords.karnataka.gov.in" style="color:#003366;font-weight:600">landrecords.karnataka.gov.in</a></td></tr>
-            <tr><th>Managed By</th><td>Revenue Dept., Govt. of Karnataka</td></tr>
-            <tr><th>Launched</th><td>2000 &mdash; India's first state land digitization</td></tr>
-            <tr><th>Districts</th><td>All 30 Districts of Karnataka</td></tr>
-            <tr><th>Mobile App</th><td>Dishaank (GPS survey number finder)</td></tr>
-            <tr><th>Helpline</th><td><a href="tel:08022113255" style="color:#003366">080-22113255</a></td></tr>
-            <tr><th>Office</th><td>SSLR Building, K.R. Circle, Bangalore &ndash; 560001</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="content-card">
-        <h3 style="margin-top:0">Service Fees (2026)</h3>
-        <table class="data-table">
-          <tbody>
-            <tr><td><strong>View RTC</strong></td><td><span class="tag-pill tag-green">Free</span></td></tr>
-            <tr><td><strong>i-RTC (Signed)</strong></td><td>&#8377;15 per copy</td></tr>
-            <tr><td><strong>Mutation Status</strong></td><td><span class="tag-pill tag-green">Free</span></td></tr>
-            <tr><td><strong>Mutation Extract</strong></td><td>&#8377;15</td></tr>
-            <tr><td><strong>Tippan Sketch</strong></td><td>&#8377;15</td></tr>
-            <tr><td><strong>Revenue Maps</strong></td><td><span class="tag-pill tag-green">Free</span></td></tr>
-            <tr><td><strong>XML Verification</strong></td><td><span class="tag-pill tag-green">Free</span></td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
- 
-  <hr class="section-divider mb-5">
- 
-  <!-- HOW TO VIEW RTC -->
-  <h2 class="text-center mb-2" id="how-to">How to View Your Bhoomi RTC Pahani Online</h2>
-  <p class="text-center text-muted mb-4" style="font-size:.92rem">A precise walkthrough of the Bhoomi portal &mdash; updated for the 2026 interface.</p>
- 
-  <div class="row g-4 mb-5">
-    <div class="col-lg-6">
-      <div class="content-card">
-        <h3 style="margin-top:0">Viewing the Free Informational RTC</h3>
-        <ol class="step-list">
-          <li class="step-item"><div class="step-num"></div><div><div class="step-title">Visit the Official Portal</div><div class="step-desc">Go to <strong>landrecords.karnataka.gov.in</strong>. No login required for a basic view. Use Chrome or Firefox &mdash; avoid Internet Explorer.</div></div></li>
-          <li class="step-item"><div class="step-num"></div><div><div class="step-title">Click "View RTC and MR"</div><div class="step-desc">Find this in the Services section on the homepage. This opens the land record search form.</div></div></li>
-          <li class="step-item"><div class="step-num"></div><div><div class="step-title">Select Location from Dropdowns</div><div class="step-desc">Choose <strong>District &rarr; Taluk &rarr; Hobli &rarr; Village</strong> in order. Always select from the dropdown &mdash; never type manually. A single spelling difference causes "No Record Found."</div></div></li>
-          <li class="step-item"><div class="step-num"></div><div><div class="step-title">Enter Your Exact Survey Number</div><div class="step-desc">Type the survey number exactly as on your deed, including Surnoc and Hissa sub-numbers (e.g., <strong>45/2</strong> not 45-2).</div></div></li>
-          <li class="step-item"><div class="step-num"></div><div><div class="step-title">Click "Fetch Details"</div><div class="step-desc">Your RTC displays on screen. This is for information only. For formal submissions &mdash; bank, court, Sub-Registrar &mdash; you need the paid <strong>i-RTC</strong>.</div></div></li>
-        </ol>
-        <div class="callout"><strong>Technical tips:</strong> If nothing opens when you click View or Download, look for a blocked pop-up icon in your browser's address bar and choose "Always allow" for this site. Clear your browser cache (Ctrl+Shift+Delete) if the page does not load correctly.</div>
-      </div>
-    </div>
-    <div class="col-lg-6">
-      <div class="content-card">
-        <h3 style="margin-top:0">Downloading a Digitally Signed i-RTC (Legally Valid)</h3>
-        <p>An <strong>i-RTC (Integrated RTC)</strong> carries an official digital signature and QR code, making it legally valid for bank loans, court proceedings, and property registration. Most institutions require the i-RTC &mdash; not the free download.</p>
-        <ol class="step-list">
-          <li class="step-item"><div class="step-num"></div><div><div class="step-title">Log Into i-RTC Wallet Services</div><div class="step-desc">Visit the Bhoomi portal and click <strong>i-RTC Wallet Services</strong>. Register with your mobile number and Aadhaar-linked OTP, or log in if you already have an account.</div></div></li>
-          <li class="step-item"><div class="step-num"></div><div><div class="step-title">Add &#8377;15 to Your Wallet</div><div class="step-desc">Top up via UPI, Net Banking, or Debit/Credit Card. <strong>Screenshot your Transaction ID immediately</strong> &mdash; this is your only recovery reference if the download fails.</div></div></li>
-          <li class="step-item"><div class="step-num"></div><div><div class="step-title">Search and Select Your Land</div><div class="step-desc">Enter District, Taluk, Hobli, Village, and Survey Number. The system displays your land record for review before finalizing payment.</div></div></li>
-          <li class="step-item"><div class="step-num"></div><div><div class="step-title">Pay &amp; Download the PDF</div><div class="step-desc">Click <strong>Pay and Print</strong>. Your signed i-RTC PDF downloads immediately. Save it securely &mdash; the download link expires. If money was deducted but PDF did not appear, use the <strong>"Missed i-RTC"</strong> section to re-download without paying again.</div></div></li>
-        </ol>
-        <div class="callout callout-danger"><strong>Best time to download:</strong> The Bhoomi server undergoes maintenance between 10 PM and 12 AM. Use the portal between 8 AM and 1 PM for the fastest payment gateway response and fewest errors.</div>
-      </div>
-    </div>
-  </div>
- 
-  <!-- i-RTC vs REGULAR -->
-  <h2 class="text-center mb-2" id="irtc">i-RTC vs Regular RTC &mdash; Which One Do You Need?</h2>
-  <p class="text-center text-muted mb-4" style="font-size:.92rem">Banks, courts, and Sub-Registrar offices have different requirements. Submitting the wrong version gets your application rejected.</p>
- 
-  <div class="content-card mb-5">
-    <div class="row g-4">
-      <div class="col-lg-7">
-        <table class="data-table">
-          <thead><tr><th>Feature</th><th>Regular RTC</th><th>i-RTC (Digitally Signed)</th></tr></thead>
-          <tbody>
-            <tr><td>Cost</td><td>Free</td><td>&#8377;15 per copy</td></tr>
-            <tr><td>Login Required</td><td class="cross">&#10007; No</td><td class="tick">&#10003; Yes (Wallet)</td></tr>
-            <tr><td>Digital Signature</td><td class="cross">&#10007; None</td><td class="tick">&#10003; Revenue Official</td></tr>
-            <tr><td>QR Verification Code</td><td class="cross">&#10007; No</td><td class="tick">&#10003; Yes</td></tr>
-            <tr><td>Bank Loans (KCC, Crop, Land)</td><td class="cross">&#10007; Not accepted</td><td class="tick">&#10003; Required</td></tr>
-            <tr><td>Court Submissions</td><td>With Taluk Office cert.</td><td class="tick">&#10003; Self-authenticating</td></tr>
-            <tr><td>Sub-Registrar Registration</td><td class="cross">&#10007; Often rejected</td><td class="tick">&#10003; Strongly preferred</td></tr>
-            <tr><td>Validity for Banks</td><td>Informational only</td><td>~3 months from date</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="col-lg-5">
-        <div class="info-box mb-3">
-          <div class="info-box-title">When to use a Regular RTC</div>
-          <ul>
-            <li>General reference &mdash; checking your own land details</li>
-            <li>Preliminary due diligence before a purchase</li>
-            <li>Research or informational purposes</li>
-            <li>Verifying a survey number before paying for i-RTC</li>
-          </ul>
-        </div>
-        <div class="info-box">
-          <div class="info-box-title">When you MUST have an i-RTC</div>
-          <ul>
-            <li>Applying for any bank loan against agricultural land</li>
-            <li>Submitting to court in a land dispute case</li>
-            <li>Property registration at Sub-Registrar's office</li>
-            <li>Applying for PM-Kisan, crop insurance, or government schemes</li>
-            <li>Any formal official purpose requiring verified land ownership proof</li>
-          </ul>
-        </div>
-        <div class="callout mt-3"><strong>Safe rule:</strong> When in doubt, always get the i-RTC. It takes five minutes more and costs &#8377;15 &mdash; and eliminates the risk of rejection entirely.</div>
-      </div>
-    </div>
-  </div>
- 
-  <hr class="section-divider mb-5">
- 
-  <!-- MUTATION -->
-  <h2 class="text-center mb-2" id="mutation">Land Mutation in Karnataka &mdash; Complete Guide to Hakku Badlavalike</h2>
-  <p class="text-center text-muted mb-4" style="font-size:.92rem">Registration at the Sub-Registrar is not the final step. Mutation is what makes you the official owner in government revenue records.</p>
- 
-  <div class="row g-4 mb-5">
-    <div class="col-lg-7">
-      <div class="content-card">
-        <h3 style="margin-top:0">Why Skipping Mutation Is a Serious Mistake</h3>
-        <p>Thousands of buyers register their sale deed and believe the process is complete. Without <strong>Hakku Badlavalike</strong>, the Bhoomi portal continues showing the <em>previous owner's name</em> indefinitely. The practical consequences:</p>
-        <ul>
-          <li>Banks refuse agricultural loans because your name does not appear in revenue records</li>
-          <li>Property tax receipts continue in the seller's name, weakening your ownership paper trail</li>
-          <li>Future resale becomes legally complicated &mdash; title searches reveal a gap in the ownership chain</li>
-          <li>Government land acquisition compensation may be paid to the person named in the RTC, not you</li>
-          <li>If the seller passes away before mutation, resolving it requires dealing with all legal heirs</li>
-        </ul>
-        <div class="callout callout-danger"><strong>Apply within 90 days</strong> of registering your sale deed. Every month you delay increases the risk of complications.</div>
-        <h3>How the Mutation Process Actually Works</h3>
-        <p>Mutation moves through a specific hierarchy. Understanding who does what helps you intervene effectively when delays occur:</p>
-        <div class="hierarchy-item">
-          <div class="hierarchy-num">1</div>
-          <div><div class="hierarchy-title">Village Accountant (VA) &mdash; Data Verification</div><div class="hierarchy-desc">The VA compares your sale deed details against existing Bhoomi records. A "J-Slip mismatch" &mdash; a spelling difference between the Kaveri portal and Bhoomi database &mdash; causes auto-mutation to fail here, requiring a manual Rectification Application. This is one of the most common silent failure points.</div></div>
-        </div>
-        <div class="hierarchy-item">
-          <div class="hierarchy-num">2</div>
-          <div><div class="hierarchy-title">Revenue Inspector (RI) &mdash; Field Verification</div><div class="hierarchy-desc">The RI physically visits the site to verify possession and serves 30-day notices to interested parties. If your status shows "Pending for RI Inspection" for more than 30 days, a personal visit to the Nadakacheri is almost always needed to schedule the inspection.</div></div>
-        </div>
-        <div class="hierarchy-item">
-          <div class="hierarchy-num">3</div>
-          <div><div class="hierarchy-title">30-Day Public Notice Period</div><div class="hierarchy-desc">A public notice invites objections from any claimants. If no objection is filed within 30 days, the mutation moves forward. If an objection is filed, the Tahsildar holds a formal hearing.</div></div>
-        </div>
-        <div class="hierarchy-item">
-          <div class="hierarchy-num">4</div>
-          <div><div class="hierarchy-title">Tahsildar &mdash; Mutation Order &amp; Database Update</div><div class="hierarchy-desc">The Tahsildar digitally signs the Mutation Order (MO), officially transferring the record to your name. The Bhoomi database updates and your new RTC is generated. Total time: typically 3 to 6 months.</div></div>
+    <div class="col-lg-4 col-md-12">
+      <div class="card h-100 shadow-sm border-0" style="background:#fff;">
+        <div class="card-body">
+          <h4 class="card-title" style="color:#003366;font-weight:700;font-size:1.25rem;">RTC vs. Mutation Register: What's the Difference?</h4>
+          <hr style="background-color:#cc7a00;height:2px;opacity:1;">
+          <p class="card-text" style="font-size:15px;color:#444;line-height:1.75;">The RTC (Pahani) is a snapshot of the present: who owns the land today, what is growing on it, what liabilities exist against it. The Mutation Register Extract is the history: every time ownership changed hands, going back decades. Banks and property lawyers insist on the MR Extract for the last 15 to 30 years because the chain of title — not just the current owner's name — is what they are underwriting. A clean RTC with a broken MR chain is a warning, not a clean title.</p>
         </div>
       </div>
     </div>
-    <div class="col-lg-5">
-      <div class="content-card mb-4">
-        <h3 style="margin-top:0">Documents Required for Mutation</h3>
-        <ul>
-          <li>&#128196; Certified copy of the registered <strong>Sale Deed</strong> (from Sub-Registrar)</li>
-          <li>&#128203; Latest <strong>RTC (Pahani)</strong> showing the previous owner's name</li>
-          <li>&#9993; Property tax receipt in the <strong>previous owner's name</strong></li>
-          <li>&#128100; <strong>Aadhaar card</strong> of the new owner (buyer)</li>
-          <li>&#128506; Land sketch/map (if required by the Taluk Office)</li>
-          <li>&#128221; Affidavit (at the revenue authority's discretion)</li>
-        </ul>
+    <div class="col-lg-4 col-md-12">
+      <div class="card h-100 shadow-sm border-0" style="background:#fff;">
+        <div class="card-body">
+          <h4 class="card-title" style="color:#003366;font-weight:700;font-size:1.25rem;">Karnataka Land Measurement System</h4>
+          <hr style="background-color:#cc7a00;height:2px;opacity:1;">
+          <p class="card-text" style="font-size:15px;color:#444;line-height:1.75;">The Bhoomi RTC measures land in Guntas, not square feet. The foundational unit: <strong>1 Gunta = 1,089 sq. ft.</strong> From there: 40 Guntas = 1 Acre = 43,560 sq. ft.; 2.47 Acres = 1 Hectare. In older ancestral documents, you may also encounter Annas — 16 Annas = one complete share of the property. An "8 Anna share" means exactly 50%. These units appear throughout sale deeds, RTCs, and Mutation Register entries. Knowing them is not optional — it is the difference between knowing what you own and guessing.</p>
+        </div>
       </div>
-      <div class="content-card mb-4">
-        <h3 style="margin-top:0">Dispute Resolution Hierarchy</h3>
-        <p style="font-size:.88rem;color:#555;margin-bottom:14px">If the Tahsildar rejects your mutation, use this appeal chain &mdash; do not go directly to the High Court.</p>
-        <table class="data-table">
-          <thead><tr><th>Authority</th><th>Time Limit</th></tr></thead>
-          <tbody>
-            <tr><td><strong>Assistant Commissioner (AC)</strong></td><td>60 days from Tahsildar's order</td></tr>
-            <tr><td><strong>Deputy Commissioner (DC)</strong></td><td>60 days from AC's order</td></tr>
-            <tr><td><strong>Karnataka Appellate Tribunal (KAT)</strong></td><td>Usually 90 days</td></tr>
-            <tr><td><strong>Civil Court</strong></td><td>For title disputes only (who the true owner is)</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="content-card">
-        <h3 style="margin-top:0">Protecting Your Land from Digital Fraud</h3>
-        <ul style="font-size:.87rem">
-          <li><strong>Quarterly check:</strong> Log into Bhoomi every 3 months and check the Mutation Status tab. An unexpected "Pending" mutation you did not initiate is a red flag &mdash; file an objection with the Tahsildar immediately.</li>
-          <li><strong>Link your mobile:</strong> Ensure your current mobile number is linked to Aadhaar and the land record. Update it if your number changes.</li>
-          <li><strong>Apply for Podi:</strong> If you share a survey number with others, apply for Podi (sub-division) to get your own individual survey number. Banks increasingly refuse loans on jointly listed RTCs.</li>
-        </ul>
+    </div>
+    <div class="col-lg-4 col-md-12">
+      <div class="card h-100 shadow-sm border-0" style="background:#fff;">
+        <div class="card-body">
+          <h4 class="card-title" style="color:#003366;font-weight:700;font-size:1.25rem;">How Stamp Duty is Calculated in Karnataka</h4>
+          <hr style="background-color:#cc7a00;height:2px;opacity:1;">
+          <p class="card-text" style="font-size:15px;color:#444;line-height:1.75;">Three components stack: Basic Stamp Duty (2%/3%/5% by slab), Cess + Surcharge (0.6% combined), and Registration Fee (revised to 2% from 31 August 2025). All are calculated on the higher of the declared price or the government guidance value — not the price you agreed to pay. For properties above ₹45 lakhs, the effective total is 7.6%. Guidance values are searchable on the Kaveri 2.0 portal. Check them before you sign anything.</p>
+        </div>
       </div>
     </div>
   </div>
- 
-  <hr class="section-divider mb-5">
- 
-  <!-- NO RECORD FOUND -->
-  <h2 class="text-center mb-2" id="troubleshoot">Why Bhoomi Shows "No Record Found" &mdash; 8 Real Causes &amp; Fixes</h2>
-  <p class="text-center text-muted mb-4" style="font-size:.92rem">This message rarely means your land record is permanently missing. Here is exactly what it means and how to resolve each scenario.</p>
- 
-  <div class="row mb-2">
-    <div class="col-12">
-      <div class="toc-box">
-        <h4>Jump to a Specific Cause</h4>
-        <ol>
-          <li><a href="#cause1">Incorrect or partial survey number format</a></li>
-          <li><a href="#cause2">Hobli name mismatch in the database</a></li>
-          <li><a href="#cause3">Data migration error from digitization</a></li>
-          <li><a href="#cause4">Recent bifurcation not yet updated</a></li>
-          <li><a href="#cause5">Land under court freeze or encumbrance</a></li>
-          <li><a href="#cause6">Old survey number after a re-survey</a></li>
-          <li><a href="#cause7">Village name recorded differently</a></li>
-          <li><a href="#cause8">Server outage or technical glitch</a></li>
-        </ol>
-      </div>
-    </div>
+
+  <h3>Key Details You Should Know</h3>
+  <table>
+    <thead><tr><th>Feature</th><th>Details</th></tr></thead>
+    <tbody>
+      <tr><th>Portal Name</th><td><strong>Bhoomi RTC</strong></td></tr>
+      <tr><th>Launched By</th><td>Government of Karnataka</td></tr>
+      <tr><th>Managed By</th><td>Revenue Department, Karnataka</td></tr>
+      <tr><th>Launch Year</th><td>2000 (First digitized land records system in India)</td></tr>
+      <tr><th>Beneficiaries</th><td>Citizens &amp; Farmers of Karnataka</td></tr>
+      <tr><th>Official Website</th><td><a href="https://landrecords.karnataka.gov.in" target="_blank">landrecords.karnataka.gov.in</a></td></tr>
+      <tr><th>Mobile App</th><td>Dishaank (GPS-based survey number identification)</td></tr>
+      <tr><th>Key Services</th><td>View RTC (Pahani), Mutation Status, Revenue Maps, Tippan, i-RTC</td></tr>
+      <tr><th>Mode of Access</th><td>Online &amp; Offline (via Nadakacheri Centers)</td></tr>
+      <tr><th>Helpdesk</th><td>080-22113255 / 8277864065 / 8277864067</td></tr>
+    </tbody>
+  </table>
+
+  <h3>How to View Village Revenue Maps Online</h3>
+  <div class="blog-image">
+    <img src="revenuemap.webp" srcset="revenuemap.webp 400w, revenuemap.webp 800w, revenuemap.webp 1200w" sizes="(max-width:600px) 388px, 600px" alt="Sample of Bhoomi Revenue Map" width="388" height="220">
   </div>
- 
-  <div class="mb-5">
-    <div class="cause-card" id="cause1"><span class="cause-tag">Cause 01</span><div class="cause-title">Incorrect or Partial Survey Number Format</div><p style="font-size:.9rem;color:#444;margin:0">Karnataka survey numbers often include sub-divisions as fractions or letters &mdash; for example <strong>45/2</strong> or <strong>67A</strong>. Entering <em>45-2</em> instead of <em>45/2</em>, typing <em>67a</em> in lowercase, or including/excluding leading zeros are all enough to produce "No Record Found."</p><div class="cause-fix"><strong>Fix:</strong> Check your original sale deed, Pahani copy, or property tax document for the exact format. Try multiple variations. Also try searching by <strong>Owner Name</strong> instead of survey number &mdash; records are sometimes indexed differently.</div></div>
- 
-    <div class="cause-card" id="cause2"><span class="cause-tag">Cause 02</span><div class="cause-title">Hobli Name Does Not Match the Database</div><p style="font-size:.9rem;color:#444;margin:0">The Bhoomi database stores hobli names in specific transliterated forms that may differ from older documents. "Yelahanaka" vs "Yelahanka" &mdash; a single character difference breaks the search entirely.</p><div class="cause-fix"><strong>Fix:</strong> Always select your hobli from the portal's dropdown &mdash; never type it manually. If you cannot find it, visit the Taluk Office and ask which hobli your specific village is registered under in the revenue records.</div></div>
- 
-    <div class="cause-card" id="cause3" style="border-left-color:#cc7a00"><span class="cause-tag" style="background:#cc7a00">Cause 03 &mdash; Most Common</span><div class="cause-title">Data Migration Error During Digitization</div><p style="font-size:.9rem;color:#444;margin:0">When Karnataka digitized its paper records in the early 2000s, thousands of entries were incorrectly transcribed &mdash; a survey number entered with a typo, a village name misspelled, or an entire sub-division accidentally omitted. Your land exists physically and legally, but the digital record is corrupted or missing.</p><div class="cause-fix"><strong>Fix:</strong> File a formal complaint at your local Taluk Office using <strong>Form 9 (Correction of RTC)</strong> along with your original handwritten Pahani. The Revenue Inspector physically verifies the land and corrects the data. This takes 30&ndash;90 days but is the only permanent solution.</div></div>
- 
-    <div class="cause-card" id="cause4"><span class="cause-tag">Cause 04</span><div class="cause-title">Recent Land Bifurcation Not Yet Updated</div><p style="font-size:.9rem;color:#444;margin:0">When a survey number is split between family members or sold in parts, the old number is closed and new sub-numbers are created. If the bifurcation was approved but not yet entered into Bhoomi, neither the old nor the new numbers appear.</p><div class="cause-fix"><strong>Fix:</strong> Check with your Taluk Office whether the Mutation and Podi (bifurcation) order have been entered into Bhoomi. Request the Mutation Register copy to track where the record currently stands.</div></div>
- 
-    <div class="cause-card" id="cause5"><span class="cause-tag">Cause 05</span><div class="cause-title">Land Under Court-Ordered Freeze or Encumbrance</div><p style="font-size:.9rem;color:#444;margin:0">Records can be temporarily locked in Bhoomi if there is an active court stay, a government acquisition notice, or an ongoing boundary dispute filed with the revenue office. During this freeze, records do not appear in public searches.</p><div class="cause-fix"><strong>Fix:</strong> Consult a property advocate and confirm with the Taluk Office whether your land is under any legal hold. Certified copies of the RTC can still be obtained directly from the Tahsildar's office even when the portal does not display the record.</div></div>
- 
-    <div class="cause-card" id="cause6"><span class="cause-tag">Cause 06</span><div class="cause-title">Old Survey Number After a Re-Survey Operation</div><p style="font-size:.9rem;color:#444;margin:0">Several areas in Karnataka have undergone complete re-survey operations assigning entirely new survey numbers. Searching with the old number returns nothing because it no longer exists in the current database.</p><div class="cause-fix"><strong>Fix:</strong> Visit your Taluk Office and request the <strong>Re-Survey Concordance Table</strong> &mdash; a document mapping old survey numbers to new ones. This is not available online and must be obtained in person.</div></div>
- 
-    <div class="cause-card" id="cause7"><span class="cause-tag">Cause 07</span><div class="cause-title">Village Name Recorded Differently in the System</div><p style="font-size:.9rem;color:#444;margin:0">With thousands of villages, many names were transliterated inconsistently during digitization. "Doddaballapura" vs "Doddaballapur" &mdash; one letter is enough to return no results.</p><div class="cause-fix"><strong>Fix:</strong> Search without your village name first &mdash; select just District, Taluk, and Hobli, then browse the village dropdown to find the exact spelling used in the Bhoomi database. This eliminates transliteration errors entirely.</div></div>
- 
-    <div class="cause-card" id="cause8"><span class="cause-tag">Cause 08</span><div class="cause-title">Server Outage or Technical Glitch</div><p style="font-size:.9rem;color:#444;margin:0">Bhoomi serves millions of users simultaneously. During peak hours, scheduled maintenance (typically 10 PM&ndash;12 AM), or after software updates, the portal may return "No Record Found" for records that exist and would display correctly at other times.</p><div class="cause-fix"><strong>Fix:</strong> Use the portal during morning hours (8 AM&ndash;11 AM) or on weekends. Clear your browser cache. If the issue persists for multiple days, contact the Bhoomi helpdesk at <strong>080-22113255</strong> or visit the SSLR Building, K.R. Circle, Bangalore.</div></div>
-  </div>
- 
-  <hr class="section-divider mb-5">
- 
-  <!-- ADVANCED -->
-  <h2 class="text-center mb-2" id="advanced">Advanced Land Record Topics in Karnataka</h2>
-  <p class="text-center text-muted mb-4" style="font-size:.92rem">Critical knowledge for serious property owners, buyers, and NRI landowners.</p>
- 
-  <div class="row g-4 mb-5">
-    <div class="col-lg-4">
-      <div class="content-card h-100">
-        <h3 style="margin-top:0">RTC vs Mutation Register &mdash; The Real Difference</h3>
-        <p>The <strong>RTC (Pahani)</strong> is a snapshot of the land's <em>current</em> status &mdash; who owns it right now, what crops are grown, the total area, and any active bank liabilities.</p>
-        <p>The <strong>Mutation Register (MR) Extract</strong> is the <em>historical log</em> of how ownership changed. Every time property was sold, inherited, or divided, a Mutation was recorded. Banks and lawyers demand MR extracts for the last 15&ndash;30 years to ensure the current RTC owner acquired the land through a legally valid chain.</p>
-        <div class="callout mt-3"><strong>Practical rule:</strong> The RTC tells you who owns the land today. The MR Extract tells you how they came to own it. You need both for proper due diligence.</div>
-      </div>
-    </div>
-    <div class="col-lg-4">
-      <div class="content-card h-100">
-        <h3 style="margin-top:0">Karnataka Land Measurement System Explained</h3>
-        <p>When reading a Bhoomi RTC, measurements appear in the traditional Karnataka system built around the <strong>Gunta</strong>:</p>
-        <ul>
-          <li><strong>1 Gunta = 1,089 square feet</strong></li>
-          <li><strong>40 Guntas = 1 Acre</strong> (= 43,560 sq ft)</li>
-          <li><strong>2.47 Acres = 1 Hectare</strong></li>
-          <li><strong>100 Cents = 1 Acre</strong> (some regions)</li>
-        </ul>
-        <p>In older handwritten pre-Bhoomi documents, you may see fractions in <strong>"Annas"</strong> &mdash; 16 Annas make one complete share. So "8 Anna share" means exactly 50% of that survey number's area. This system appears in ancestral property documents and partition deeds.</p>
-        <p>Use the <strong>Land Area Converter</strong> tool above to convert between any of these units instantly.</p>
-      </div>
-    </div>
-    <div class="col-lg-4">
-      <div class="content-card h-100">
-        <h3 style="margin-top:0">After DC Conversion &mdash; The Step Most Owners Miss</h3>
-        <p>Getting the Deputy Commissioner's (DC) Conversion Order moves your land from "agricultural" to "residential/commercial" legally. But many owners stop there &mdash; and it creates a serious problem.</p>
-        <p>Your land record in Bhoomi still shows it as agricultural. You must actively apply to the local Panchayat or Municipality to create a <strong>Form 9/11 (Khata)</strong>, transferring the record from Bhoomi into:</p>
-        <ul>
-          <li><strong>E-Swathu</strong> &mdash; for properties in rural Gram Panchayats</li>
-          <li><strong>E-Aasthi / UPOR</strong> &mdash; for urban municipal corporations</li>
-        </ul>
-        <p>Without this step, you pay agricultural land tax on legally residential land, and banks will not give home loans because government records still classify it as agricultural.</p>
-      </div>
-    </div>
-  </div>
- 
-  <!-- PAYMENT ISSUES -->
-  <div class="content-card mb-5">
-    <h2 style="text-align:left">Common Payment &amp; Technical Issues &mdash; Solutions</h2>
-    <div class="row g-4">
-      <div class="col-lg-6">
-        <h4>Payment &amp; Download Problems</h4>
-        <table class="data-table">
-          <thead><tr><th>Issue</th><th>Solution</th></tr></thead>
-          <tbody>
-            <tr><td><strong>Money deducted, no PDF</strong></td><td>Go to the <strong>"Missed i-RTC"</strong> section. Enter your Transaction ID to re-download without paying again. Always screenshot your Transaction ID at payment.</td></tr>
-            <tr><td><strong>Payment status "Pending"</strong></td><td>Usually resolves within 24 hours. Do not pay again. Check the <strong>"Payment Status"</strong> tool first.</td></tr>
-            <tr><td><strong>PDF downloads as 0 KB</strong></td><td>Download was interrupted. Use the Missed i-RTC section to re-trigger. Ensure stable internet and disable pop-up blockers.</td></tr>
-            <tr><td><strong>OTP not received</strong></td><td>Wait 2 minutes before Resend. Confirm your mobile is not on a DND list. Try a different browser or clear cache.</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="col-lg-6">
-        <h4>Data &amp; Record Problems</h4>
-        <table class="data-table">
-          <thead><tr><th>Issue</th><th>Solution</th></tr></thead>
-          <tbody>
-            <tr><td><strong>Survey number not found</strong></td><td>Verify Surnoc and Hissa format. Try searching by <strong>Owner Name</strong>. See the full 8-cause troubleshooter above.</td></tr>
-            <tr><td><strong>Name or area mismatch</strong></td><td>Visit the <strong>Tahsildar office</strong> with your original Sale Deed and apply for a <strong>Rectification Mutation</strong>. Cannot be fixed online.</td></tr>
-            <tr><td><strong>Mutation "Pending" 60+ days</strong></td><td>Visit the Nadakacheri in person. The RI inspection may not have been scheduled. Track using the Mutation Status tab.</td></tr>
-            <tr><td><strong>RTC shows wrong owner</strong></td><td>If recently purchased, mutation takes 45&ndash;90 days. If longer, check for a J-Slip mismatch at the Bhoomi center.</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
- 
-  <hr class="section-divider mb-5">
- 
-  <!-- FAQ -->
-  <h2 class="text-center mb-2" id="faq">Frequently Asked Questions</h2>
-  <p class="text-center text-muted mb-4" style="font-size:.92rem">Detailed answers to the most common questions about Karnataka's Bhoomi land records portal.</p>
- 
-  <div class="row justify-content-center mb-5">
-    <div class="col-lg-9">
-      <div class="faq-card"><button class="faq-q-btn" onclick="toggleFaq(this)">What is the Bhoomi portal and who manages it?<span class="chevron">&#9662;</span></button><div class="faq-answer">Bhoomi is Karnataka's official digital land records management system, managed by the Revenue Department of the Government of Karnataka. Launched in 2000 as India's first state-wide land records digitization project, it stores over 2.5 crore land records covering all 30 districts. Citizens can access RTCs (Pahani), mutation records, revenue maps, and related documents at <strong>landrecords.karnataka.gov.in</strong> without visiting government offices.</div></div>
- 
-      <div class="faq-card"><button class="faq-q-btn" onclick="toggleFaq(this)">Is the RTC downloaded from Bhoomi valid for a bank loan?<span class="chevron">&#9662;</span></button><div class="faq-answer">No. The free informational RTC is <strong>not accepted by banks</strong> for loan applications. SBI, Canara Bank, KVGB, and most cooperative banks require the <strong>digitally signed i-RTC</strong>, which contains a QR code and official digital signature. The i-RTC costs &#8377;15 via the i-RTC Wallet service. Most banks require it to be <strong>no more than 3 months old</strong> at submission. For preliminary eligibility checks, a regular RTC is usually acceptable &mdash; always confirm with your specific branch.</div></div>
- 
-      <div class="faq-card"><button class="faq-q-btn" onclick="toggleFaq(this)">How long does mutation (Hakku Badlavalike) take in Karnataka?<span class="chevron">&#9662;</span></button><div class="faq-answer">The mutation process typically takes <strong>3 to 6 months</strong>. Key stages: Village Accountant data verification (varies), Revenue Inspector site visit within 30&ndash;45 days, 30-day public notice period for objections, and final Tahsildar approval. If status shows "Pending for RI Inspection" for more than 30 days, a personal visit to the Nadakacheri is needed. Track status online using the Mutation Status tab with your Transaction ID from the Sub-Registrar.</div></div>
- 
-      <div class="faq-card"><button class="faq-q-btn" onclick="toggleFaq(this)">What is a Gunta and how do I convert it to square feet or acres?<span class="chevron">&#9662;</span></button><div class="faq-answer">The Gunta is the primary land measurement unit for agricultural land in Karnataka. Key conversions: <strong>1 Gunta = 1,089 square feet</strong>. <strong>40 Guntas = 1 Acre</strong> (= 43,560 sq ft). <strong>2.47 Acres = 1 Hectare</strong>. <strong>100 Cents = 1 Acre</strong>. In older handwritten documents, "Annas" are used &mdash; 16 Annas equal one complete share, so 8 Annas means 50% of that survey number's total area. Use the free Land Area Converter tool on this page to convert between all Karnataka land units instantly.</div></div>
- 
-      <div class="faq-card"><button class="faq-q-btn" onclick="toggleFaq(this)">What is the stamp duty for property registration in Karnataka in 2026?<span class="chevron">&#9662;</span></button><div class="faq-answer">For a Sale Deed: <strong>2%</strong> for properties below &#8377;20 Lakh, <strong>3%</strong> for &#8377;20&ndash;45 Lakh, and <strong>5%</strong> for above &#8377;45 Lakh. Additionally: <strong>Registration Fee 2%</strong> (revised from 1% effective 31 Aug 2025), <strong>CESS 0.5%</strong>, and <strong>Surcharge 0.1%</strong>. Effective total rate for above &#8377;45 Lakh is approximately <strong>7.6%</strong>. Gift Deeds within immediate family attract fixed nominal duty of &#8377;1,000&ndash;&#8377;5,000. Stamp duty is calculated on the higher of declared sale price or government guidance (circle) value. Use the Stamp Duty Calculator on this page for an instant estimate.</div></div>
- 
-      <div class="faq-card"><button class="faq-q-btn" onclick="toggleFaq(this)">What is B-Kharab land and why does it matter when buying property?<span class="chevron">&#9662;</span></button><div class="faq-answer">B-Kharab is land within a survey number legally reserved for public use &mdash; footpaths, cart tracks, canals, or burial grounds. This land <strong>belongs to the government</strong> even if it lies inside your survey boundaries. You cannot build on it, wall it, or use it privately. Class A Kharab (rocky, waterlogged) belongs to you. Class B cannot be used at all. Always subtract B-Kharab from the total RTC extent to determine the true usable area. An RTC showing 2 Acres with 0.15 acres of B-Kharab means only 1.85 usable acres &mdash; directly affecting the real price per square foot.</div></div>
- 
-      <div class="faq-card"><button class="faq-q-btn" onclick="toggleFaq(this)">What is the Dishaank app and how do I use it to verify land?<span class="chevron">&#9662;</span></button><div class="faq-answer">Dishaank is a mobile app by the Karnataka Remote Sensing Applications Centre (KSRSAC). It overlays cadastral (land survey) boundaries onto a live GPS map of your current location. To use it: download from Google Play Store, enable GPS, stand on the land, and the app displays the exact Survey Number and Gomala (government land) details at your location. It is essential for verifying that the physical plot you are shown actually matches the Survey Number the seller has given you &mdash; the simplest way to detect fraudulent land sales.</div></div>
- 
-      <div class="faq-card"><button class="faq-q-btn" onclick="toggleFaq(this)">How do I check mutation status and what does "Pending" mean?<span class="chevron">&#9662;</span></button><div class="faq-answer">Visit <strong>landrecords.karnataka.gov.in</strong> and click <strong>Mutation Status</strong>. Enter District, Taluk, Hobli, Village, and Survey Number and click Fetch Details. The system shows the current stage: Pending with the specific officer, Under Inspection, Approved, or Rejected. If you recently purchased land, allow 45&ndash;90 days before the mutation reflects on your RTC. If it has been over 60 days with no update, visit the Nadakacheri or Taluk Office in person with your Transaction ID from the Sub-Registrar.</div></div>
-    </div>
-  </div>
- 
-  <!-- CONTACT -->
-  <hr class="section-divider mb-5">
-  <h2 class="text-center mb-4" id="contact">Bhoomi Helpdesk &amp; Official Contact Information</h2>
-  <div class="row g-4 mb-5">
-    <div class="col-md-4"><div class="contact-card"><div class="contact-icon-wrap">&#128222;</div><h5>Helpline Numbers</h5><p><a href="tel:08022113255">080-22113255</a><br><a href="tel:8277864065">8277864065</a><br><a href="tel:8277864067">8277864067</a></p></div></div>
-    <div class="col-md-4"><div class="contact-card"><div class="contact-icon-wrap">&#127963;</div><h5>Physical Office</h5><p>SSLR Building,<br>K.R. Circle, Bangalore &ndash; 560001<br>Karnataka, India</p></div></div>
-    <div class="col-md-4"><div class="contact-card"><div class="contact-icon-wrap">&#127760;</div><h5>Official Portals</h5><p><a href="https://landrecords.karnataka.gov.in" target="_blank" rel="noopener">landrecords.karnataka.gov.in</a><br><a href="https://kaveri.karnataka.gov.in" target="_blank" rel="noopener">kaveri.karnataka.gov.in</a> (EC)<br><a href="https://bhoomojini.karnataka.gov.in" target="_blank" rel="noopener">bhoomojini.karnataka.gov.in</a></p></div></div>
-  </div>
- 
+  <ol>
+    <li>Go to the "Revenue Maps" section on the Bhoomi home page.</li>
+    <li>Select your District, Taluk, and Hobli from the dropdowns.</li>
+    <li>Choose your Village from the list.</li>
+    <li>Click the PDF icon to download the complete village map.</li>
+  </ol>
+  <p>Revenue Maps are free, require no login, and show the geographical boundaries of every survey number within a village. They are essential for verifying that the physical plot a seller shows you matches the survey boundaries for the number on their documents. Large files — ensure a stable connection before downloading.</p>
+
+  <h3>What is the Dishaank App?</h3>
+  <p>Developed by the Karnataka Remote Sensing Applications Centre (KSRSAC), the <a href="https://bhoomirtc.net.in/dishaank.html">Dishaank</a> App overlays Bhoomi survey boundaries on your GPS location in real time. Standing on any piece of land and opening the app shows you exactly which survey number you are in — the single most reliable on-ground verification tool for buyers. It also identifies adjacent Gomala (government pasture land) boundaries, essential before buying near village common lands. Download from the Google Play Store; enable GPS location services.</p>
+
+  <h3>Bhoomi Service Fees &amp; Charges (2026)</h3>
+  <table>
+    <thead><tr><th>Service</th><th>Document Type</th><th>Estimate (₹)</th></tr></thead>
+    <tbody>
+      <tr><td>View RTC</td><td>Informational Copy (reference only)</td><td>Free</td></tr>
+      <tr><td>i-RTC</td><td>Digitally Signed (valid for all formal purposes)</td><td>₹15.00</td></tr>
+      <tr><td>Mutation Status</td><td>Online Status Check</td><td>Free</td></tr>
+      <tr><td>Mutation Extract</td><td>Certified Copy (MR Extract)</td><td>₹15.00</td></tr>
+      <tr><td>Tippan (RTC Sketch)</td><td>Survey Sketch with Boundaries</td><td>₹15.00</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Technical &amp; Access Issues</h3>
+  <ul>
+    <li><strong>Browser:</strong> Use Google Chrome or Mozilla Firefox. Avoid older Internet Explorer versions.</li>
+    <li><strong>Clear Cache:</strong> If pages load incorrectly, clear Cache and Cookies (Ctrl+Shift+Delete) and restart.</li>
+    <li><strong>Pop-up Blockers:</strong> The RTC generates in a new window. If nothing happens after clicking "View," look for a blocked pop-up notification in your address bar and select "Always allow."</li>
+    <li><strong>OTP Delays:</strong> Wait 2 minutes before clicking "Resend." Ensure your number is not on a DND list.</li>
+    <li><strong>Best Hours:</strong> 6 AM to 9 AM for lowest traffic and fastest response.</li>
+  </ul>
+
+  <h3>Payment &amp; Download Issues</h3>
+  <table>
+    <thead><tr><th>Issue</th><th>Solution</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Money Deducted, No PDF</strong></td><td>Go to the "Missed i-RTC" section. Enter your order or transaction number to re-download without paying again.</td></tr>
+      <tr><td><strong>Payment Status "Pending"</strong></td><td>Clears within 24 hours in most cases. Do not make a second payment. Use "Check Payment Status" on the portal.</td></tr>
+      <tr><td><strong>PDF Not Opening</strong></td><td>Install Adobe Acrobat Reader. If the file is 0KB, the download was interrupted — re-download from "Missed i-RTC."</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Official Helpdesk &amp; Contact</h3>
+  <table>
+    <thead><tr><th>Helpline</th><th>Contact</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Helpline Numbers</strong></td><td><a href="tel:080-22113255">080-22113255</a> / <a href="tel:8277864065">8277864065</a> / <a href="tel:8277864067">8277864067</a></td></tr>
+      <tr><td><strong>Email</strong></td><td><a href="mailto:bhoomi@karnataka.gov.in">bhoomi@karnataka.gov.in</a></td></tr>
+      <tr><td><strong>Physical Office</strong></td><td>SSLR Building, K.R. Circle, Bangalore – 560001</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Expert Advice:</strong> Screenshot your Transaction ID or PRN (Payment Reference Number) immediately after any payment. This is the only reference the helpdesk can use to trace a failed download — without it, resolving a payment issue takes significantly longer.</p>
+
+  <h3>Frequently Asked Questions</h3>
+  <p><strong>Q: Can I use the online RTC for legal purposes?</strong><br>A: The free viewable RTC is for personal reference only. For bank loans, court submissions, Sub-Registrar transactions, or any formal official purpose, you must use the Digitally Signed i-RTC — the only version that carries authentication and can be verified by the receiving party.</p>
+  <p><strong>Q: My land is missing from Bhoomi. What do I do?</strong><br>A: Visit the Bhoomi Monitoring Cell at your Taluk Office. Bring your original or photocopied handwritten Pahani, any sale deed covering the land, and property tax receipts. File a data entry correction request. The Revenue Inspector will physically verify and correct the record — typically within 30 to 90 days.</p>
+  <p><strong>Q: How long does mutation take?</strong><br>A: 60 to 90 days when the process runs without complications. RI inspection delays or filed objections commonly extend this to 4 to 6 months. Apply within 90 days of registration and check status monthly. If stuck at RI Inspection for more than 30 days, visit the Taluk Office in person.</p>
+  <p><strong>Q: What is the difference between an EC and an RTC?</strong><br>A: The RTC is a Revenue Department record showing current ownership, crops, and liabilities. The EC is a registration record from the Sub-Registrar's office listing every formally registered transaction (sales, mortgages, gifts) involving the property. Both are essential for due diligence — they verify different aspects of the property's legal history and neither substitutes for the other.</p>
+  <p><strong>Q: Can I check my mutation status online?</strong><br>A: Yes. Visit Mutation Status on the Bhoomi portal, enter your District, Taluk, Hobli, Village, and Survey Number. The system shows the current stage of your application — VA Checklist, RI Inspection, Notice Period, or Tahsildar Approval — along with any objections filed.</p>
+  <p><strong>Q: What is Bagair Hukum and does it affect my land?</strong><br>A: Bagair Hukum means "without authority" — it classifies land where unauthorized encroachment or possession disputes have been flagged by the Revenue Department. Records with this status may not appear in normal public portal searches. Check rdservices.karnataka.gov.in to see whether your survey number is flagged. If it is, you must appear before the Revenue Authority to resolve the status.</p>
+
 </div>
 </main>
- 
-<footer class="bg-custom text-center py-4">
+
+<footer class="bg-custom text-center py-3">
   <div class="container">
-    <p class="mb-2"><strong>Disclaimer:</strong> This website provides information about Karnataka's Bhoomi land records system for public convenience. We are not affiliated with, endorsed by, or part of the Government of Karnataka or the Revenue Department. All service links point to the official government domain (karnataka.gov.in). Verify critical details on the official portal before taking legal or financial action.</p>
-    <div class="mb-2">
-      <a href="/" class="me-3">Home</a>
-      <a href="/dishaank.html" class="me-3">Dishaank App</a>
-      <a href="/about-us.html" class="me-3">About Us</a>
-      <a href="/privacy-policy.html">Privacy Policy</a>
-    </div>
-    <div>&copy; 2026 Bhoomi Karnataka Information Portal. All Rights Reserved.</div>
+    <p><strong>Disclaimer:</strong> This website aims to provide information about Bhoomi. We are not affiliated with the Government of Karnataka. This website is created for public convenience.</p>
+    <div>© 2026 Bhoomi Portal</div>
   </div>
 </footer>
- 
-<div class="modal fade" id="otherServicesModal" tabindex="-1" aria-labelledby="otherServicesLabel" aria-hidden="true">
+
+<div class="modal fade" id="otherServicesModal" tabindex="-1" aria-labelledby="otherServicesModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-header bg-custom text-white">
-        <h5 class="modal-title" id="otherServicesLabel">Other Land Record Services</h5>
+        <h5 class="modal-title" id="otherServicesModalLabel">Other Land Record Services</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <div class="row g-3">
-          <div class="col-md-6"><a class="btn service-btn" href="https://landrecords.karnataka.gov.in/service84" target="_blank" rel="noopener">Strict Settlement</a></div>
-          <div class="col-md-6"><a class="btn service-btn" href="https://clws.karnataka.gov.in/" target="_blank" rel="noopener">Crop Loan Waiver</a></div>
-          <div class="col-md-6"><a class="btn service-btn" href="https://landrecords.karnataka.gov.in/namematch/" target="_blank" rel="noopener">Name Match Algorithm</a></div>
-          <div class="col-md-6"><a class="btn service-btn" href="https://rdservices.karnataka.gov.in/service63" target="_blank" rel="noopener">Aadhaar Seeding Report</a></div>
-          <div class="col-md-6"><a class="btn service-btn" href="https://rdservices.karnataka.gov.in/Service51/" target="_blank" rel="noopener">Bagair Hukum</a></div>
-          <div class="col-md-6"><a class="btn service-btn" href="https://landrecords.karnataka.gov.in/service131/form57/" target="_blank" rel="noopener">Form 57</a></div>
-          <div class="col-md-6"><a class="btn service-btn" href="https://landrecords.karnataka.gov.in/service130/" target="_blank" rel="noopener">View Survey Document</a></div>
-          <div class="col-md-6"><a class="btn service-btn" href="https://bhoomojini.karnataka.gov.in/oscitizen/" target="_blank" rel="noopener">Request Survey Document</a></div>
-          <div class="col-md-6"><a class="btn service-btn" href="https://www.govtanalytics.karnataka.gov.in/bhoomiDI/" target="_blank" rel="noopener">Disposal Ranking</a></div>
-          <div class="col-md-6"><a class="btn service-btn" href="https://rdservices.karnataka.gov.in/service55/" target="_blank" rel="noopener">Land Beat Report</a></div>
-          <div class="col-md-6"><a class="btn service-btn" href="https://landrecords.karnataka.gov.in/service40/" target="_blank" rel="noopener">Village Wise Pendency</a></div>
-          <div class="col-md-6"><a class="btn service-btn" href="https://landrecords.karnataka.gov.in/bhoomi.html" target="_blank" rel="noopener">Bhoomi Tutorials</a></div>
-          <div class="col-md-6"><a class="btn service-btn" href="https://parihara.karnataka.gov.in/Pariharahome/" target="_blank" rel="noopener">Parihara</a></div>
-          <div class="col-md-6"><a class="btn service-btn" href="https://landrecords.karnataka.gov.in/service7/" target="_blank" rel="noopener">Dispute Cases</a></div>
+          <div class="col-md-6"><a class="btn service-btn" href="https://landrecords.karnataka.gov.in/Service2/">View RTC &amp; MR</a></div>
+          <div class="col-md-6"><a class="btn service-btn" href="https://landrecords.karnataka.gov.in/Service38/GuestUserInfo.aspx">i-RTC</a></div>
+          <div class="col-md-6"><a class="btn service-btn" href="https://landrecords.karnataka.gov.in/service84">Strict Settlement</a></div>
+          <div class="col-md-6"><a class="btn service-btn" href="https://clws.karnataka.gov.in/">Crop Loan Waiver</a></div>
+          <div class="col-md-6"><a class="btn service-btn" href="https://landrecords.karnataka.gov.in/service99">Podi Service</a></div>
+          <div class="col-md-6"><a class="btn service-btn" href="https://landrecords.karnataka.gov.in/service40/PendcySurveyNoWiseRpt">Mutation History</a></div>
+          <div class="col-md-6"><a class="btn service-btn" href="https://landrecords.karnataka.gov.in/namematch/">Name Match Algorithm</a></div>
+          <div class="col-md-6"><a class="btn service-btn" href="https://rdservices.karnataka.gov.in/service63">Aadhaar Seeding Report</a></div>
+          <div class="col-md-6"><a class="btn service-btn" href="https://rdservices.karnataka.gov.in/Service51/">Bagair Hukum</a></div>
+          <div class="col-md-6"><a class="btn service-btn" href="https://landrecords.karnataka.gov.in/service131/form57/">Form 57</a></div>
+          <div class="col-md-6"><a class="btn service-btn" href="https://landrecords.karnataka.gov.in/service130/">View Survey Document</a></div>
+          <div class="col-md-6"><a class="btn service-btn" href="https://bhoomojini.karnataka.gov.in/oscitizen/">Request Survey Document</a></div>
+          <div class="col-md-6"><a class="btn service-btn" href="https://landrecords.karnataka.gov.in/service7/">Dispute Cases</a></div>
+          <div class="col-md-6"><a class="btn service-btn" href="https://www.govtanalytics.karnataka.gov.in/bhoomiDI/">Disposal Ranking</a></div>
+          <div class="col-md-6"><a class="btn service-btn" href="https://rdservices.karnataka.gov.in/service55/">Land Beat Report</a></div>
+          <div class="col-md-6"><a class="btn service-btn" href="https://landrecords.karnataka.gov.in/service40/">Village Wise Pendency</a></div>
+          <div class="col-md-6"><a class="btn service-btn" href="https://landrecords.karnataka.gov.in/bhoomi.html">Bhoomi Tutorials</a></div>
+          <div class="col-md-6"><a class="btn service-btn" href="https://parihara.karnataka.gov.in/Pariharahome/">Parihara</a></div>
         </div>
       </div>
       <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
     </div>
   </div>
 </div>
- 
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-const toSqFt={sqft:1,sqm:10.7639,gunta:1089,cent:435.6,acre:43560,bigha:14400,hectare:107639.104};
-const unitLabels={sqft:'Sq. Feet',sqm:'Sq. Metres',gunta:'Gunta',cent:'Cent',acre:'Acre',bigha:'Bigha',hectare:'Hectare'};
-function fmtArea(n){if(n===0)return'0';if(n<0.0001)return n.toExponential(3);if(n<0.01)return n.toFixed(6);if(n<1)return n.toFixed(4);if(n<10000)return parseFloat(n.toFixed(4)).toLocaleString('en-IN');return parseFloat(n.toFixed(2)).toLocaleString('en-IN')}
-function convertArea(){const val=parseFloat(document.getElementById('area-input').value);const from=document.getElementById('unit-from').value;const to=document.getElementById('unit-to').value;const resEl=document.getElementById('converter-result');const allBox=document.getElementById('all-units-box');const grid=document.getElementById('all-units-grid');if(!val||isNaN(val)||val<0){resEl.style.display='none';allBox.style.display='none';return}const inSqFt=val*toSqFt[from];const result=inSqFt/toSqFt[to];resEl.style.display='block';document.getElementById('conv-from-text').textContent=fmtArea(val)+' '+unitLabels[from];document.getElementById('conv-to-text').textContent=fmtArea(result)+' '+unitLabels[to];allBox.style.display='block';grid.innerHTML=Object.keys(toSqFt).map(u=>{const v=inSqFt/toSqFt[u];const active=u===to?'unit-chip-active':'';return'<div class="unit-chip '+active+'"><span class="unit-val">'+fmtArea(v)+'</span><span class="unit-name">'+unitLabels[u]+'</span></div>'}).join('')}
-function swapUnits(){const f=document.getElementById('unit-from');const t=document.getElementById('unit-to');[f.value,t.value]=[t.value,f.value];convertArea()}
-function fmtRs(n){return'&#8377;'+Math.round(n).toLocaleString('en-IN')}
-function calcStamp(){const val=parseFloat(document.getElementById('propValue').value);if(!val||val<=0){alert('Please enter a valid property value.');return}const docType=document.getElementById('docType').value;let sdRate=0,sdFixed=false,sdFixedAmt=0,sdLabel='';if(docType==='gift_family'){sdFixed=true;sdFixedAmt=5000;sdLabel='Fixed &#8377;5,000 (Family Gift)'}else if(docType==='settlement'){sdFixed=true;sdFixedAmt=1000;sdLabel='Fixed &#8377;1,000 (Family Settlement)'}else if(docType==='partition'){sdRate=0.01;sdLabel='1% (Partition)'}else if(docType==='mortgage'){sdRate=0.005;sdLabel='0.5% (Mortgage)'}else{if(val<2000000){sdRate=0.02;sdLabel='2% (Below &#8377;20L)'}else if(val<=4500000){sdRate=0.03;sdLabel='3% (&#8377;20L&#8211;&#8377;45L)'}else{sdRate=0.05;sdLabel='5% (Above &#8377;45L)'}}const stamp=sdFixed?sdFixedAmt:val*sdRate;const regFee=val*0.02;const cess=val*0.005;const sur=val*0.001;const total=stamp+regFee+cess+sur;const pct=((total/val)*100).toFixed(2);const rows=[{label:'Stamp Duty ('+sdLabel+')',val:fmtRs(stamp)},{label:'Registration Fee (2% &mdash; revised Aug 2025)',val:fmtRs(regFee)},{label:'CESS (0.5% of property value)',val:fmtRs(cess)},{label:'Surcharge (0.1% of property value)',val:fmtRs(sur)}];document.getElementById('stamp-rows').innerHTML=rows.map(r=>'<div class="result-row"><span class="result-label">'+r.label+'</span><span class="result-value">'+r.val+'</span></div>').join('');document.getElementById('stamp-total').innerHTML=fmtRs(total);document.getElementById('stamp-note').innerHTML='<strong>Effective rate: '+pct+'%</strong> of property value. Calculated on the higher of declared price or government guidance (circle) value. Verify current circle rates on the <strong>Kaveri 2.0 portal</strong> before finalising. Registration fee revised from 1% to 2% effective <strong>31 August 2025</strong>.';document.getElementById('stamp-results').style.display='block';document.getElementById('stamp-results').scrollIntoView({behavior:'smooth',block:'nearest'})}
-function resetStamp(){document.getElementById('stamp-results').style.display='none';document.getElementById('propValue').value=''}
-document.addEventListener('keydown',e=>{if(e.key==='Enter'&&document.activeElement.id==='propValue')calcStamp()});
-function updateProgress(){const boxes=document.querySelectorAll('#checklist input[type="checkbox"]');const checked=[...boxes].filter(b=>b.checked).length;const pct=Math.round((checked/boxes.length)*100);document.getElementById('progress-bar').style.width=pct+'%';document.getElementById('progress-text').textContent=pct+'% Completed ('+checked+'/'+boxes.length+')'}
-function toggleFaq(btn){const card=btn.parentElement;const isOpen=card.classList.contains('open');document.querySelectorAll('.faq-card.open').forEach(el=>el.classList.remove('open'));if(!isOpen)card.classList.add('open')}
-</script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
